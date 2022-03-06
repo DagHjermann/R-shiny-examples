@@ -8,14 +8,24 @@
 #
 
 library(shiny)
-library(nycflights13)
+library(dplyr)
+library(DT)              # DT interactive tables
+
+# Example data - see https://github.com/tidyverse/nycflights13 
+# - also see https://r4ds.had.co.nz/relational-data.html 
+library(nycflights13)    # example data 
+
+origin_airports <- unique(flights$origin)
+
+origin_table_data <- airports %>%
+  filter(faa %in% origin_airports)
 
 ui <- fluidPage(
   tabsetPanel(
     id = "wizard",
     type = "hidden",
     tabPanel("page_1", 
-             "Welcome!",
+             DT::dataTableOutput('origin_table'),
              actionButton("page_12", "next")
     ),
     tabPanel("page_2", 
@@ -31,6 +41,8 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session) {
+  
+  # 
   switch_page <- function(i) {
     updateTabsetPanel(inputId = "wizard", selected = paste0("page_", i))
   }
@@ -39,6 +51,13 @@ server <- function(input, output, session) {
   observeEvent(input$page_21, switch_page(1))
   observeEvent(input$page_23, switch_page(3))
   observeEvent(input$page_32, switch_page(2))
+  
+  # . output$origin_table ----
+  output$origin_table <- renderDataTable(
+    origin_table_data, 
+    server = TRUE
+  )
+  
 }
 
 # Run the application 
