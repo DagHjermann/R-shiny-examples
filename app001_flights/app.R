@@ -25,11 +25,13 @@ ui <- fluidPage(
     id = "wizard",
     type = "hidden",
     tabPanel("page_1", 
+             h3("Select airports"),
              DT::dataTableOutput('origin_table'),
              actionButton("page_12", "next")
     ),
-    tabPanel("page_2", 
-             "Only one page to go",
+    tabPanel("page_2",
+             h3("Selected airports"),
+             DT::dataTableOutput('origin_selection'),
              actionButton("page_21", "prev"),
              actionButton("page_23", "next")
     ),
@@ -56,6 +58,14 @@ server <- function(input, output, session) {
   output$origin_table <- renderDataTable(
     origin_table_data, 
     server = TRUE
+  )
+  
+  # . output$origin_selection ----
+  output$origin_selection <- renderDataTable(
+    
+    origin_table_data[input$origin_table_rows_selected,],
+    server = TRUE
+
   )
   
 }
