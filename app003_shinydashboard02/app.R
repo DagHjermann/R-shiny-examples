@@ -82,13 +82,32 @@ server <- function(input, output) {
   })
   
   # Table of selected table 1 values
-  output$table1_sel_dt <- renderDataTable(
-    table1[input$table1_dt_rows_selected,],
-    server = TRUE,
-    selection = 'none',
-    options = list(lengthChange = FALSE)
-  ) 
+  # output$table1_sel_dt <- renderDataTable(
+  #   table1[input$table1_dt_rows_selected,],
+  #   server = TRUE,
+  #   selection = 'none',
+  #   options = list(lengthChange = FALSE)
+  # ) 
   
+  # Table of selected table 1 values
+  # Using server-side (DT::renderDT) instead of client-side (renderDataTable)
+  #   for formatting using formatStyle
+  # See 
+  #   https://rstudio.github.io/DT/shiny.html
+  # and (for 'options')
+  #   https://datatables.net/reference/option/ 
+  # and (for styling using formatStyle)
+  #   https://rstudio.github.io/DT/functions.html 
+  output$table1_sel_dt <- DT::renderDT({
+    datatable(
+      table1[input$table1_dt_rows_selected,],
+      selection = 'none',
+      options = list(lengthChange = FALSE, searching = FALSE)) %>% 
+      formatStyle(
+        c("Var1", "Var2"),
+        color = 'red', backgroundColor = 'orange', fontWeight = 'bold')
+  })
+
   # Plot of selected table 2 values
   output$table2_plot <- renderPlot(
     ggplot(table2_sel(), aes(Var1, Var3)) +
