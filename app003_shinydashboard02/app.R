@@ -30,10 +30,7 @@ table2 <- data.frame(
 ui <- dashboardPage(
   dashboardHeader(title = "Basic dashboard"),
   dashboardSidebar(
-    sidebarMenu(
-      menuItem("Selection", tabName = "page_1", icon = icon("dashboard")),
-      menuItem("Results", tabName = "page_2", icon = icon("th"))
-    )
+    sidebarMenuOutput('menu')
   ),
   dashboardBody(
     tabItems(
@@ -67,6 +64,15 @@ ui <- dashboardPage(
 
 server <- function(input, output) {
   
+  # For dynamic side bar
+  # See https://rstudio.github.io/shinydashboard/structure.html#dynamic-content-1 
+  output$menu <- renderMenu({
+     sidebarMenu(
+      menuItem("Selection", tabName = "page_1", icon = icon("dashboard")),
+      menuItem("Results", tabName = "page_2", icon = icon("th"))
+     )
+  })
+
   # Make DT data table for table 1 
   output$table1_dt <- renderDataTable(
     table1,
