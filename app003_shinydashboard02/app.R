@@ -9,7 +9,8 @@
 library(shiny)
 library(shinydashboard)
 library(DT)              # DT interactive tables
-library(ggplot2)    
+library(ggplot2)
+library(dplyr)
 
 table1 <- data.frame(
   Var1 = letters[1:5],
@@ -62,13 +63,20 @@ server <- function(input, output) {
     server = TRUE
   )
 
+  
+  table2_sel <- reactive({
+    table1_sel <- table1[input$table1_dt_rows_selected,]
+    table2 %>% 
+      filter(Var1 %in% table1_sel$Var1)
+  })
+  
   output$table2_plot <- renderPlot(
-    ggplot(table2, aes(Var1, Var3)) +
+    ggplot(table2_sel(), aes(Var1, Var3)) +
       geom_point()
   )
   
   output$table2_dt <- renderDataTable(
-    table2,
+    table2_sel(),
     server = TRUE
   )
   
