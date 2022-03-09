@@ -1,9 +1,7 @@
 
 # Basic shinydashboard from
 # https://rstudio.github.io/shinydashboard/get_started.html
-
-# Tried to add button to change tab, that didn't work
-# (loosely following https://mastering-shiny.org/action-dynamic.html#dynamic-wizard) 
+# with DT tables instead 
 
 # app.R ##
 library(shiny)
@@ -56,7 +54,9 @@ ui <- dashboardPage(
       #   table 1 (using Var1 which is the common variable)
       tabItem(
         tabName = "page_2",
-        h3("Widgets tab content"),
+        h4("Selected rows of table 1"),
+        dataTableOutput("table1_sel_dt"),
+        h4("Results from table 2"),
         dataTableOutput("table2_dt"),
         plotOutput("table2_plot")
       )
@@ -81,6 +81,14 @@ server <- function(input, output) {
       filter(Var1 %in% table1_sel$Var1)
   })
   
+  # Table of selected table 1 values
+  output$table1_sel_dt <- renderDataTable(
+    table1[input$table1_dt_rows_selected,],
+    server = TRUE,
+    selection = 'none',
+    options = list(lengthChange = FALSE)
+  ) 
+  
   # Plot of selected table 2 values
   output$table2_plot <- renderPlot(
     ggplot(table2_sel(), aes(Var1, Var3)) +
@@ -91,7 +99,7 @@ server <- function(input, output) {
   output$table2_dt <- renderDataTable(
     table2_sel(),
     server = TRUE
-  )
+  ) 
   
   
 }
