@@ -9,10 +9,16 @@
 library(shiny)
 library(shinydashboard)
 library(DT)              # DT interactive tables
+library(ggplot2)    
 
 table1 <- data.frame(
   Var1 = letters[1:5],
-  var2 = 10:14
+  Var2 = 10:14
+)
+
+table2 <- data.frame(
+  Var1 = rep(letters[1:5], each = 3),
+  Var3 = seq(100, length = 15)
 )
 
 ui <- dashboardPage(
@@ -40,7 +46,9 @@ ui <- dashboardPage(
       # Second tab content
       tabItem(
         tabName = "page_2",
-        h2("Widgets tab content")
+        h3("Widgets tab content"),
+        dataTableOutput("table2_dt"),
+        plotOutput("table2_plot")
       )
     )
   )
@@ -51,6 +59,16 @@ server <- function(input, output) {
 
   output$table1_dt <- renderDataTable(
     table1,
+    server = TRUE
+  )
+
+  output$table2_plot <- renderPlot(
+    ggplot(table2, aes(Var1, Var3)) +
+      geom_point()
+  )
+  
+  output$table2_dt <- renderDataTable(
+    table2,
     server = TRUE
   )
   
