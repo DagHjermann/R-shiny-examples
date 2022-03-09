@@ -64,13 +64,23 @@ ui <- dashboardPage(
 
 server <- function(input, output) {
   
+  
   # For dynamic side bar
   # See https://rstudio.github.io/shinydashboard/structure.html#dynamic-content-1 
   output$menu <- renderMenu({
+
+    # browser()
+    
+    if (!isTruthy(input$table1_dt_rows_selected)){
+       sidebarMenu(
+       menuItem("Selection", tabName = "page_1", icon = icon("dashboard"))
+     )
+    } else {
      sidebarMenu(
       menuItem("Selection", tabName = "page_1", icon = icon("dashboard")),
       menuItem("Results", tabName = "page_2", icon = icon("th"))
      )
+    }
   })
 
   # Make DT data table for table 1 
