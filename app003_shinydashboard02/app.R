@@ -12,27 +12,35 @@ library(DT)              # DT interactive tables
 library(ggplot2)
 library(dplyr)
 
+#
+# Data tables used
+#   Note that Var1 is in both tables, but Table 2 has several rows for each value of Var1 
+#   We show entire Table 1 and use it for selecting which parts of Table 2 we should show
+#   The selected values of Var1 (from Table 1) is used to select parts of Table 2 
+#
+
 table1 <- data.frame(
   Var1 = letters[1:5],
   Var2 = 10:14
 )
 
 table2 <- data.frame(
-  Var1 = rep(letters[1:5], each = 3),
-  Var3 = seq(100, length = 15)
-)
+  Var1 = rep(letters[1:5], each = 50),
+  Var3 = rep(10:14, each = 50) + rnorm(5*50)
+  )
 
 ui <- dashboardPage(
   dashboardHeader(title = "Basic dashboard"),
   dashboardSidebar(
     sidebarMenu(
-      menuItem("Dashboard", tabName = "page_1", icon = icon("dashboard")),
-      menuItem("Widgets", tabName = "page_2", icon = icon("th"))
+      menuItem("Selection", tabName = "page_1", icon = icon("dashboard")),
+      menuItem("Results", tabName = "page_2", icon = icon("th"))
     )
   ),
   dashboardBody(
     tabItems(
-      # First tab content
+      
+      # First tab content - table 1 (for selection)
       tabItem(
         tabName = "page_1",
         fluidRow(
@@ -44,7 +52,8 @@ ui <- dashboardPage(
         )
       ),
       
-      # Second tab content
+      # Second tab content - the rows of table 2 corresponding selection in 
+      #   table 1 (using Var1 which is the common variable)
       tabItem(
         tabName = "page_2",
         h3("Widgets tab content"),
@@ -57,24 +66,28 @@ ui <- dashboardPage(
 
 
 server <- function(input, output) {
-
+  
+  # Make DT data table for table 1 
   output$table1_dt <- renderDataTable(
     table1,
     server = TRUE
   )
 
-  
+  # Use selection in table 1 to select rows of table 2
+  # The function returns Table 2 filtered by values of Var1 selected by the user
   table2_sel <- reactive({
     table1_sel <- table1[input$table1_dt_rows_selected,]
     table2 %>% 
       filter(Var1 %in% table1_sel$Var1)
   })
   
+  # Plot of selected table 2 values
   output$table2_plot <- renderPlot(
     ggplot(table2_sel(), aes(Var1, Var3)) +
-      geom_point()
+      geom_jitter(width = 0.2)
   )
   
+  # Table of selected table 2 values
   output$table2_dt <- renderDataTable(
     table2_sel(),
     server = TRUE
