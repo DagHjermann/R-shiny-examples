@@ -5,7 +5,10 @@
 
 library(shiny)
 library(ggplot2)
-library(ggrepel)
+library(dplyr)
+
+mtcars <- mtcars %>%
+  mutate(mpg2 = mpg/6)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
