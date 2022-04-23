@@ -9,49 +9,522 @@ output: html_document
 ```{r}
 
 library(ggplot2)
+library(dplyr)
 
 ```
 
 
-## Main function: Create line   
+## Make geom without label     
+* Based on 'geom_springs' example    
+    - Script 10 in Elveovervåkning (C:\Data\seksjon 318\Elveovervakning)  
+    - The original example was based on the superb [flipbook](https://evamaerey.github.io/flipbooks/extending_ggplot2.html#1) by Eva Mae Rey which again is based on [The 'spring' chapters](https://ggplot2-book.org/spring1.html) in the ggplot2 book     
+
+### Define create_linecoordinates  
+Building on our experiment above , we define a general function for drawing the line to the label           
+* **This function will be used in all parts 3.1-3.5**      
 ```{r}
 
-# angle = angle in degrees
-# length = length in percentage of xrange
-# xrange = total range (max-min) of x values
-# aspect = scale of y / scale of x
-
-create_line <- function(x, y, label, angle, length, aspect = 1, xrange = 10){
-  
+create_linecoordinates <- function(x, y, angle, length) {
+  if (length <= 0) {
+    rlang::abort("`tension` must be larger than 0")
+  }
   angle_rad <- angle/180*pi
-  length_abs <- length/100*xrange
+  length_abs <- length
+  # length_abs <- length/100*xrange     # if length in percentage of xrange
   x_abs <- length_abs*cos(angle_rad)
-  y_abs <- length_abs*cos(angle_rad)*aspect
+  y_abs <- length_abs*cos(angle_rad)
+  xend <- x + x_abs
+  yend = y + y_abs
+
+# Create the new data
   data.frame(
-    x = x,
-    y = y,
-    label = label,
-    xend = x + x_abs,
-    yend = y + y_abs
+    x = c(x, xend),
+    y = c(y, yend)
   )
-  
 }
 
-# Test
-create_line(5, 5, "my_text", 45, 10)
-  
+
 
 ```
 
-### Test for plot  
+#### Test of our function    
+```{r, fig.width=5, fig.height=3}
+
+create_linecoordinates(
+  x = 4, y = 2,
+  angle = 45, length = 5
+) %>%
+  ggplot() +
+  aes(x = x, y = y) +
+  geom_point() +
+  geom_path()
+
+```
+
+### Define the stat  
+
+* Always camel-case name (here, 'StatReglabel'), and the new class is always saved into a variable of the same name (`StatSpring <- ggproto("StatSpring", ...`)      
+* We make the function by overwriting existing methods (some of which should not be overwritten)  
+    - Use `print(Stat)` to see them all  
+* We here overwrite three methods:   
+    - setup_params   
+    - setup_data    
+    - compute_panel   
+* We could also have overwritten compute_group and compute_layer   
+    
 ```{r}
 
-create_line(c(4,5,6), c(5,4,6), paste0("mytext", 1:3), 45, 10) %>%
-  ggplot() +
-  aes(x = x, y = y, xend = xend, yend = yend) +
+StatReglabel <- ggproto(
+  
+  "StatReglabel",    # name
+  
+  Stat,            # define this as a stat  
+  
+  # Sets up parameters correctly
+  setup_params = function(data, params) {
+    if (is.null(params$angle)) {
+      params$diameter <- 45
+    }
+    if (is.null(params$length)) {
+      params$tension <- 0.5
+    } else if (params$length < 0) {
+      rlang::abort("Length must be zero or a positive number")
+    }
+    params
+  },
+  
+  # Sets up data correctly - this also seems to be boilerplate  
+  # If group doesn't have unique numbers, we make it so  
+  setup_data = function(data, params) {
+    if (anyDuplicated(data$group)) {
+      data$group <- paste(data$group, seq_len(nrow(data)), sep = "-")
+    }
+    data
+  },
+  
+  # There are three possible compute_ methods. We overwrite only compute_panel
+  #>     compute_group: function
+  #>     compute_layer: function
+  #>     compute_panel: function  
+  compute_panel = function(data, scales, angle = 45, length = 0.5) {
+    cols_to_keep <- setdiff(names(data), c("x", "y"))
+    label_lines <- lapply(
+      seq_len(nrow(data)), 
+      function(i) {
+      line_path <- create_linecoordinates(data$x[i], data$y[i], angle, length)
+      cbind(line_path, unclass(data[i, cols_to_keep]))
+      }
+      )
+    do.call(rbind, label_lines)
+  },
+  
+  # Set what is needed input  
+  required_aes = c("x", "y")
+
+  )
+    
+```
+
+#### Test the stat  
+
+Unpacking the compute_panel function. We start by making some data:     
+```{r}
+
+my_data <- tibble(
+  x = 1:2,
+  y = 4:3,) %>%
+  mutate(group = row_number())
+
+angle = 45
+length = 5
+
+
+```
+
+
+This line in StatSpring just returns all variables that are not the start and end coordinates    
+```{r}
+
+cols_to_keep <- setdiff(names(my_data), c("x", "y")) 
+
+```
+
+
+
+This part, using `lapply`, creates a list of one data frame per row. We apply it to our data:     
+```{r}
+
+# Code as in the stat, excep t that data is replaced by my_data
+
+label_lines <- lapply(
+  seq_len(nrow(my_data)), 
+  function(i) {
+    line_path <- create_linecoordinates(my_data$x[i], my_data$y[i], angle, length)
+    cbind(line_path, unclass(my_data[i, cols_to_keep]))
+  }
+)
+
+str(label_lines)
+
+```
+
+This combines the list of data frames to a single data frame, by binding them together by row:      
+```{r}
+
+do.call(rbind, label_lines) 
+
+```
+
+
+
+### Define the geom        
+* Also called the *constructor*   
+* Mainly boilerplate code  
+* Match the argument order and naming used in the geom constructors provided by ggplot2 itself, since users have an internalized expectation about how they work  
+
+```{r}
+
+geom_reglabel <- function(mapping = NULL, data = NULL, 
+                        stat = "reglabel",              # here goes the name of our stat
+                        position = "identity", ..., 
+                        angle = 45, length = 5,    # here goes our stat's parameters 
+                        arrow = NULL, lineend = "butt", linejoin = "round", 
+                        na.rm = FALSE, show.legend = NA, inherit.aes = TRUE) {
+  layer(
+    data = data, 
+    mapping = mapping, 
+    stat = stat, 
+    geom = GeomPath,            # GeomPath: set type of geom used to show the plot    
+    position = position, 
+    show.legend = show.legend, 
+    inherit.aes = inherit.aes, 
+    params = list(              # here our parameters are sent on to the layer() function  
+      angle = angle,
+      length = length,
+      arrow = arrow, 
+      lineend = lineend, 
+      linejoin = linejoin, 
+      na.rm = na.rm, 
+      ...
+    )
+  )
+}
+
+```
+
+
+### Test geom_reglabel  
+
+First we make some data (and plot them)    
+```{r, fig.width=6, fig.height=4}
+
+set.seed(123)
+mydata <- tibble(
+  x = runif(5, max = 10),
+  y = runif(5, max = 10),
+  angle = 45,
+  length = 5,
+  class = 1:5
+)
+
+# Basic
+ggplot(mydata) +
+  aes(x = x, y = y) +
   geom_point() +
-  geom_segment() +
-  geom_text(aes(x = xend, y = yend, label = label), hjust = 0)
+  geom_reglabel()
+
+# Test faceting
+ggplot(mydata) +
+  aes(x = x, y = y) +
+  geom_point() +
+  geom_reglabel() +
+  facet_wrap(~class)
+
+# Test colors
+ggplot(mydata) +
+  aes(x = x, y = y, color = factor(class)) +
+  geom_point() +
+  geom_reglabel() +
+  facet_wrap(~class)
+
+```
+
+
+
+
+## Make geom with label     
+* Based on 'geom_springs' example    
+    - Script 10 in Elveovervåkning (C:\Data\seksjon 318\Elveovervakning)  
+    - The original example was based on the superb [flipbook](https://evamaerey.github.io/flipbooks/extending_ggplot2.html#1) by Eva Mae Rey which again is based on [The 'spring' chapters](https://ggplot2-book.org/spring1.html) in the ggplot2 book     
+
+
+### Define the path stat  
+
+```{r}
+
+StatReglabelpath <- ggproto(
+  
+  "StatReglabelpath",    # name
+  
+  Stat,            # define this as a stat  
+  
+  # Sets up parameters correctly
+  setup_params = function(data, params) {
+    if (is.null(params$angle)) {
+      params$diameter <- 45
+    }
+    if (is.null(params$length)) {
+      params$tension <- 0.5
+    } else if (params$length < 0) {
+      rlang::abort("Length must be zero or a positive number")
+    }
+    params
+  },
+  
+  # Sets up data correctly - this also seems to be boilerplate  
+  # If group doesn't have unique numbers, we make it so  
+  setup_data = function(data, params) {
+    if (anyDuplicated(data$group)) {
+      data$group <- paste(data$group, seq_len(nrow(data)), sep = "-")
+    }
+    data
+  },
+  
+  # There are three possible compute_ methods. We overwrite only compute_panel
+  #>     compute_group: function
+  #>     compute_layer: function
+  #>     compute_panel: function  
+  compute_panel = function(data, scales, angle = 45, length = 0.5) {
+    cols_to_keep <- setdiff(names(data), c("x", "y"))
+    label_lines <- lapply(
+      seq_len(nrow(data)), 
+      function(i) {
+      line_path <- create_linecoordinates(data$x[i], data$y[i], angle, length)
+      cbind(line_path, unclass(data[i, cols_to_keep]))
+      }
+      )
+    do.call(rbind, label_lines)
+  },
+  
+  # Set what is needed input  
+  required_aes = c("x", "y")
+
+  )
+    
+```
+
+
+### Define the label stat  
+
+```{r}
+
+StatReglabeltext <- ggproto(
+  
+  "StatReglabeltext",    # name
+  
+  Stat,            # define this as a stat  
+  
+  # Sets up parameters correctly
+  setup_params = function(data, params) {
+    if (is.null(params$angle)) {
+      params$diameter <- 45
+    }
+    if (is.null(params$length)) {
+      params$tension <- 0.5
+    } else if (params$length < 0) {
+      rlang::abort("Length must be zero or a positive number")
+    }
+    params
+  },
+  
+  # Sets up data correctly - this also seems to be boilerplate  
+  # If group doesn't have unique numbers, we make it so  
+  setup_data = function(data, params) {
+    if (anyDuplicated(data$group)) {
+      data$group <- paste(data$group, seq_len(nrow(data)), sep = "-")
+    }
+    data
+  },
+  
+  # There are three possible compute_ methods. We overwrite only compute_panel
+  #>     compute_group: function
+  #>     compute_layer: function
+  #>     compute_panel: function  
+  compute_panel = function(data, scales, angle = 45, length = 0.5) {
+    cols_to_keep <- setdiff(names(data), c("x", "y", "label"))
+    label_positions <- lapply(
+      seq_len(nrow(data)), 
+      function(i) {
+      label_pos <- create_linecoordinates(data$x[i], data$y[i], angle, length) %>%
+        tail(1) %>%
+        mutate(label = data$label[i])
+      cbind(label_pos, unclass(data[i, cols_to_keep]))
+      }
+      )
+    do.call(rbind, label_positions)
+  },
+  
+  # Set what is needed input  
+  required_aes = c("x", "y", "label")
+
+  )
+    
+```
+
+
+
+#### Test the stat  
+
+Unpacking the compute_panel function. We start by making some data:     
+```{r}
+
+my_data <- tibble(
+  x = 1:2,
+  y = 4:3,
+  label = letters[1:2]) %>%
+  mutate(group = row_number())
+
+angle = 45
+length = 5
+
+
+```
+
+
+This line in StatSpring just returns all variables that are not the start and end coordinates    
+```{r}
+
+cols_to_keep <- setdiff(names(my_data), c("x", "y" ,"label")) 
+
+```
+
+
+
+This part, using `lapply`, creates a list of one data frame per row. We apply it to our data:     
+```{r}
+
+# Code as in the stat, excep t that data is replaced by my_data
+
+label_positions <- lapply(
+      seq_len(nrow(my_data)), 
+      function(i) {
+      label_pos <- create_linecoordinates(my_data$x[i], my_data$y[i], angle, length) %>%
+        tail(1) %>%
+        mutate(label = my_data$label[i])
+      cbind(label_pos, unclass(my_data[i, cols_to_keep]))
+      }
+      )
+
+str(label_positions)
+
+```
+
+This combines the list of data frames to a single data frame, by binding them together by row:      
+```{r}
+
+do.call(rbind, label_positions) 
+
+ggplot(my_data, aes(x, y)) +
+  geom_point() +
+  geom_text(data = do.call(rbind, label_positions), aes(label = label))
+
+```
+
+
+
+### Define path geom_spring      
+
+```{r}
+
+geom_reglabelpath <- function(mapping = NULL, data = NULL, 
+                        stat = "reglabelpath",              # here goes the name of our stat
+                        position = "identity", ..., 
+                        angle = 45, length = 5,    # here goes our stat's parameters 
+                        arrow = NULL, lineend = "butt", linejoin = "round", 
+                        na.rm = FALSE, show.legend = NA, inherit.aes = TRUE) {
+  layer(
+    data = data, 
+    mapping = mapping, 
+    stat = stat, 
+    geom = GeomPath,            # GeomPath: set type of geom used to show the plot    
+    position = position, 
+    show.legend = show.legend, 
+    inherit.aes = inherit.aes, 
+    params = list(              # here our parameters are sent on to the layer() function  
+      angle = angle,
+      length = length,
+      arrow = arrow, 
+      lineend = lineend, 
+      linejoin = linejoin, 
+      na.rm = na.rm, 
+      ...
+    )
+  )
+}
+
+```
+
+
+
+### Define label geom_spring      
+
+```{r}
+
+geom_reglabeltext <- function(mapping = NULL, data = NULL, 
+                        stat = "reglabeltext",              # here goes the name of our stat
+                        position = "identity", ..., 
+                        angle = 45, length = 5,    # here goes our stat's parameters 
+                        na.rm = FALSE, show.legend = NA, inherit.aes = TRUE) {
+  layer(
+    data = data, 
+    mapping = mapping, 
+    stat = stat, 
+    geom = GeomText,            # GeomText: set type of geom used to show the plot    
+    position = position, 
+    show.legend = show.legend, 
+    inherit.aes = inherit.aes, 
+    params = list(              # here our parameters are sent on to the layer() function  
+      angle = angle,
+      length = length,
+      na.rm = na.rm, 
+      ...
+    )
+  )
+}
+  
+```
+
+
+
+### Tests 
+
+#### Test geom_reglabelpath   
+
+First we make some data (and plot them)    
+```{r, fig.width=6, fig.height=4}
+
+set.seed(123)
+mydata <- tibble(
+  x = runif(5, max = 10),
+  y = runif(5, max = 10),
+  label = letters[1:5],
+  angle = 45,
+  length = 5,
+  class = 1:5
+)
+
+
+# Test colors
+ggplot(mydata) +
+  aes(x = x, y = y, color = factor(class)) +
+  geom_point() +
+  geom_reglabelpath() 
+
+# Test colors
+ggplot(mydata) +
+  aes(x = x, y = y, label = label, color = factor(class)) +
+  geom_point() +
+  geom_reglabeltext(aes(label = label), angle = 45, length = 5, na.rm = TRUE) 
 
 ```
 
