@@ -7,9 +7,19 @@ library(shiny)
 library(ggplot2)
 library(ggrepel)
 
-dat <- read.csv("KartOgFigurgrunnlag2021.csv") %>%
+dat <- read.csv("KartOgFigurgrunnlag2021.csv", encoding = "") %>%
   mutate(x = x/1000,
          y = y/1000)
+
+# very_simple_map <- map_data("world", "Norway") %>% 
+  add_transformed_coord()
+
+very_simple_map <- read.csv("very_simple_map.csv") %>%
+  mutate(x = x/1000,
+         y = y/1000)
+
+# browser()
+  
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
@@ -24,9 +34,9 @@ ui <- fluidPage(
             numericInput("force_pull","force_pull", value = 1),
             radioButtons("direction", "direction", choices = c("both", "x", "y"), selected = "both"),
             sliderInput("nudge_x", "nudge_x", 
-                        min = -2, max = 2, step = 0.1, value = 0),
+                        min = -40, max = 40, step = 1, value = 0),
             sliderInput("nudge_y", "nudge_y", 
-                        min = -2, max = 2, step = 0.1, value = 0),
+                        min = -40, max = 40, step = 1, value = 0),
             sliderInput("box.padding", "box.padding", 
                         min = 0, max = 2, step = 0.05, value = 0.25),
             sliderInput("point.padding", "point.padding", 
@@ -38,7 +48,7 @@ ui <- fluidPage(
             sliderInput("point.size", "point.size", 
                         min = 0, max = 3, step = 0.1, value = 1),
             sliderInput("min.segment.length", "min.segment.length", 
-                        min = 0, max = 3, step = 0.1, value = 0.5),
+                        min = 0, max = 50, step = 1, value = 0),
             sliderInput("xlim", "xlim", 
                         min = 550, max = 850, step = 5, value = c(550,850)),
             numericInput("seed","seed", value = 100),
@@ -49,7 +59,7 @@ ui <- fluidPage(
 
         # Show a plot of the generated distribution
         mainPanel(
-           plotOutput("repel_plot", height = "650px")
+           plotOutput("repel_plot", height = "750px")
         )
     )
 )
@@ -58,8 +68,10 @@ ui <- fluidPage(
 server <- function(input, output) {
   
     output$repel_plot <- renderPlot({
-      ggplot(dat, aes(x, y, label = Shortname)) +
+      ggplot(dat, aes(x, y)) +
+        annotate("path", x = very_simple_map$x, y = very_simple_map$y, group = very_simple_map$group) +
         geom_text_repel(
+          aes(label = Shortname),
           force = input$force,
           force_pull = input$force_pull,
           direction = input$direction,
@@ -76,7 +88,7 @@ server <- function(input, output) {
           ) +
         geom_point(color = 'red') +
         theme_classic(base_size = 16) +
-        coord_equal()
+        coord_equal(xlim = c(450, 900), ylim = c(6900, 7600))
     })
 
 }
