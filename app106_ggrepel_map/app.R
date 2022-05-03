@@ -1,11 +1,15 @@
 #
-# Testing ggrepel options
+# Testing ggrepel options on map data 
 # See 'https://ggrepel.slowkow.com/articles/examples.html'  
 #
 
 library(shiny)
 library(ggplot2)
 library(ggrepel)
+
+dat <- read.csv("KartOgFigurgrunnlag2021.csv") %>%
+  mutate(x = x/1000,
+         y = y/1000)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
@@ -36,7 +40,7 @@ ui <- fluidPage(
             sliderInput("min.segment.length", "min.segment.length", 
                         min = 0, max = 3, step = 0.1, value = 0.5),
             sliderInput("xlim", "xlim", 
-                        min = 0, max = 6, step = 0.25, value = c(0,6)),
+                        min = 550, max = 850, step = 5, value = c(550,850)),
             numericInput("seed","seed", value = 100),
             
             
@@ -45,7 +49,7 @@ ui <- fluidPage(
 
         # Show a plot of the generated distribution
         mainPanel(
-           plotOutput("repel_plot")
+           plotOutput("repel_plot", height = "650px")
         )
     )
 )
@@ -54,7 +58,7 @@ ui <- fluidPage(
 server <- function(input, output) {
   
     output$repel_plot <- renderPlot({
-      ggplot(mtcars, aes(wt, mpg, label = rownames(mtcars))) +
+      ggplot(dat, aes(x, y, label = Shortname)) +
         geom_text_repel(
           force = input$force,
           force_pull = input$force_pull,
@@ -71,7 +75,8 @@ server <- function(input, output) {
           seed = input$seed
           ) +
         geom_point(color = 'red') +
-        theme_classic(base_size = 16)
+        theme_classic(base_size = 16) +
+        coord_equal()
     })
 
 }
