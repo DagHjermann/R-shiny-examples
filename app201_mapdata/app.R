@@ -21,6 +21,7 @@ stations_for_map <- data_all %>%
   left_join(lookup_species, by = join_by(LATIN_NAME))
 
 species_all <- unique(stations_for_map$species)
+stations_all <- unique(stations_for_map$STATION_CODE)
 
 # from
 # https://www.r-bloggers.com/2017/03/4-tricks-for-working-with-r-leaflet-and-shiny/
@@ -33,6 +34,8 @@ ui <- fluidPage(
          br(),br(),br(),br(),
          shiny::selectInput("param", "Substance", params_all, "CD"),
          shiny::selectizeInput("species", "Species", species_all, "Cod", multiple = TRUE),
+         # should add interactive stations selector, which is updated when the map is clicked
+         # shiny::selectizeInput("station", "Station", stations_all, "30B", multiple = FALSE),
          plotOutput("plot", height="300px")),
   br()
 )
