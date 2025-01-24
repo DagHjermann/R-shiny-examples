@@ -17,10 +17,7 @@ server <- function(input, output) {
   output$d3 <- renderD3({
     # df <- data.frame(y = runif(5, 0, input$bar_max))
     y = runif(5, 0, input$bar_max)
-    r2d3(
-      y,
-      script = system.file("examples/baranims.js", package = "r2d3")
-    )
+    r2d3(y, script = "baranims.js")
   })
 }
 
