@@ -7,7 +7,7 @@ var bars = r2d3.svg.selectAll('rect')
 
 bars.enter()
     .append('rect')
-      .attr('width', function(d) { return d * width; })
+      .attr('width', d => d*width)
       .attr('height', barHeight)
       .attr('y', function(d, i) { return i * barHeight; })
       .attr('fill', 'steelblue');
