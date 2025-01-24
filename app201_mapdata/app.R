@@ -49,7 +49,12 @@ server <- function(input, output) {
   output$map <- renderLeaflet({
     # select stations by selected species (top layer of map)
     stations_selected_species <- stations_for_map %>%
-      filter(species %in% input$species)
+      filter(species %in% input$species)%>%
+      mutate(
+        color = case_when(
+          species %in% "Cod" ~ "red",
+          species %in% "Blue mussel" ~ "blue")
+      )
     # select stations that have been clicked (layer below top layer)
     selected_station = data_of_click$clickedMarker$id
     if(is.null(selected_station)){selected_station = "30B"}
@@ -61,7 +66,7 @@ server <- function(input, output) {
       setView(lng = 13 , lat = 66, zoom = 4) %>%
       addTiles(options = providerTileOptions(noWrap = TRUE)) %>%
       addCircleMarkers(data=stations_selected_click, ~x , ~y, radius=12 , color="green",  fillColor="green", stroke = TRUE) %>%
-      addCircleMarkers(data=stations_selected_species, ~x , ~y, layerId=~STATION_CODE, popup=~STATION_CODE, radius=8 , color="black",  fillColor="red", stroke = TRUE, fillOpacity = 0.8)
+      addCircleMarkers(data=stations_selected_species, ~x , ~y, layerId=~STATION_CODE, popup=~STATION_CODE, radius=8 , color="black",  fillColor=~color, stroke = TRUE, fillOpacity = 0.8)
   })
   # store the click
   observeEvent(input$map_marker_click,{
