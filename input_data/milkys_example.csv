@@ -1,464 +1,1452 @@
-STATION_CODE,PARAM,MYEAR,concentration,loq
-10B,CB118,1994,109.5,Above LOQ
-10B,CB118,1995,80,Above LOQ
-10B,CB118,1996,33.5,Above LOQ
-10B,CB118,1997,32,Above LOQ
-10B,CB118,1998,31,Above LOQ
-10B,CB118,1999,41.5,Above LOQ
-10B,CB118,2000,15,Above LOQ
-10B,CB118,2001,18,Above LOQ
-10B,CB118,2002,27,Above LOQ
-10B,CB118,2003,22,Above LOQ
-10B,CB118,2004,21.5,Above LOQ
-10B,CB118,2005,15,Below LOQ
-10B,CB118,2006,16,Above LOQ
-10B,CB118,2007,17,Above LOQ
-10B,CB118,2008,12.5,Above LOQ
-10B,CB118,2009,19.5,Above LOQ
-10B,CB118,2010,11.5,Below LOQ
-10B,CB118,2011,12.5,Above LOQ
-10B,CB118,2012,16,Above LOQ
-10B,CB118,2013,13,Above LOQ
-10B,CB118,2014,9,Above LOQ
-10B,CB118,2015,16,Above LOQ
-10B,CB118,2016,13,Above LOQ
-10B,CB118,2017,18.2,Above LOQ
-10B,CB118,2018,11.55,Above LOQ
-10B,CB118,2020,12.2,Above LOQ
-10B,CB118,2021,9.305,Above LOQ
-10B,CB118,2022,11.2,Above LOQ
-10B,CD,1994,0.23,Above LOQ
-10B,CD,1995,0.188,Above LOQ
-10B,CD,1996,0.095,Above LOQ
-10B,CD,1997,0.128,Above LOQ
-10B,CD,1998,0.119,Above LOQ
-10B,CD,1999,0.137,Above LOQ
-10B,CD,2000,0.125,Above LOQ
-10B,CD,2001,0.129,Above LOQ
-10B,CD,2002,0.059,Above LOQ
-10B,CD,2003,0.099,Above LOQ
-10B,CD,2004,0.103,Above LOQ
-10B,CD,2005,0.079,Above LOQ
-10B,CD,2006,0.0779,Above LOQ
-10B,CD,2007,0.082,Above LOQ
-10B,CD,2008,0.092,Above LOQ
-10B,CD,2009,0.06,Above LOQ
-10B,CD,2010,0.083,Above LOQ
-10B,CD,2011,0.102,Above LOQ
-10B,CD,2012,0.081,Above LOQ
-10B,CD,2013,0.074,Above LOQ
-10B,CD,2014,0.053,Above LOQ
-10B,CD,2015,0.12,Above LOQ
-10B,CD,2016,0.11,Above LOQ
-10B,CD,2017,0.21,Above LOQ
-10B,CD,2018,0.19,Above LOQ
-10B,CD,2020,0.098,Above LOQ
-10B,CD,2021,0.135,Above LOQ
-10B,CD,2022,0.13,Above LOQ
-15B,CB118,1990,22,Below LOQ
-15B,CB118,1991,45,Above LOQ
-15B,CB118,1992,34,Above LOQ
-15B,CB118,1993,26,Above LOQ
-15B,CB118,1994,29,Above LOQ
-15B,CB118,1995,34,Above LOQ
-15B,CB118,1996,34.5,Above LOQ
-15B,CB118,1997,44.5,Above LOQ
-15B,CB118,1998,30,Above LOQ
-15B,CB118,1999,30,Above LOQ
-15B,CB118,2000,18,Above LOQ
-15B,CB118,2001,40.5,Above LOQ
-15B,CB118,2002,28.5,Above LOQ
-15B,CB118,2003,27,Above LOQ
-15B,CB118,2004,15,Below LOQ
-15B,CB118,2005,24,Above LOQ
-15B,CB118,2006,19,Above LOQ
-15B,CB118,2007,20,Below LOQ
-15B,CB118,2008,15,Above LOQ
-15B,CB118,2009,13.5,Above LOQ
-15B,CB118,2010,18,Above LOQ
-15B,CB118,2011,17,Above LOQ
-15B,CB118,2012,25,Above LOQ
-15B,CB118,2013,19,Above LOQ
-15B,CB118,2014,12,Above LOQ
-15B,CB118,2015,11,Above LOQ
-15B,CB118,2016,16,Above LOQ
-15B,CB118,2017,14.4,Above LOQ
-15B,CB118,2018,17.9,Above LOQ
-15B,CB118,2019,9.58,Above LOQ
-15B,CB118,2020,16.2,Above LOQ
-15B,CB118,2021,14.5,Above LOQ
-15B,CB118,2022,12.5,Above LOQ
-15B,CD,1990,0.026,Above LOQ
-15B,CD,1991,0.009,Below LOQ
-15B,CD,1992,0.025,Above LOQ
-15B,CD,1993,0.016,Above LOQ
-15B,CD,1994,0.014,Above LOQ
-15B,CD,1995,0.016,Above LOQ
-15B,CD,1996,0.024,Above LOQ
-15B,CD,1997,0.031,Above LOQ
-15B,CD,1998,0.03,Above LOQ
-15B,CD,1999,0.026,Above LOQ
-15B,CD,2000,0.033,Above LOQ
-15B,CD,2001,0.026,Above LOQ
-15B,CD,2002,0.0183,Above LOQ
-15B,CD,2003,0.0374,Above LOQ
-15B,CD,2004,0.0097,Above LOQ
-15B,CD,2005,0.019,Above LOQ
-15B,CD,2006,0.0058,Above LOQ
-15B,CD,2007,0.023,Above LOQ
-15B,CD,2008,0.018,Above LOQ
-15B,CD,2009,0.02,Above LOQ
-15B,CD,2010,0.021,Above LOQ
-15B,CD,2011,0.017,Above LOQ
-15B,CD,2012,0.032,Above LOQ
-15B,CD,2013,0.032,Above LOQ
-15B,CD,2014,0.026,Above LOQ
-15B,CD,2015,0.015,Above LOQ
-15B,CD,2016,0.022,Above LOQ
-15B,CD,2017,0.024,Above LOQ
-15B,CD,2018,0.038,Above LOQ
-15B,CD,2019,0.021,Above LOQ
-15B,CD,2020,0.027,Above LOQ
-15B,CD,2021,0.024,Above LOQ
-15B,CD,2022,0.025,Above LOQ
-23B,CB118,1990,27.5,Below LOQ
-23B,CB118,1991,13,Above LOQ
-23B,CB118,1992,29,Above LOQ
-23B,CB118,1993,29.5,Above LOQ
-23B,CB118,1994,15,Below LOQ
-23B,CB118,1995,24,Above LOQ
-23B,CB118,1996,22.5,Above LOQ
-23B,CB118,1997,13.5,Above LOQ
-23B,CB118,1998,21,Above LOQ
-23B,CB118,1999,25.5,Below LOQ
-23B,CB118,2000,24.5,Above LOQ
-23B,CB118,2001,19,Above LOQ
-23B,CB118,2002,13,Above LOQ
-23B,CB118,2003,12,Below LOQ
-23B,CB118,2004,28.5,Below LOQ
-23B,CB118,2005,25.5,Above LOQ
-23B,CB118,2006,13.5,Above LOQ
-23B,CB118,2007,18,Below LOQ
-23B,CB118,2008,6.9,Below LOQ
-23B,CB118,2009,10.5,Above LOQ
-23B,CB118,2010,10.5,Below LOQ
-23B,CB118,2011,15.5,Above LOQ
-23B,CB118,2012,15,Below LOQ
-23B,CB118,2013,17,Above LOQ
-23B,CB118,2014,14,Above LOQ
-23B,CB118,2015,10,Above LOQ
-23B,CB118,2016,11,Above LOQ
-23B,CB118,2017,16.3,Above LOQ
-23B,CB118,2018,13.15,Above LOQ
-23B,CB118,2019,17.4,Above LOQ
-23B,CB118,2020,16.6,Above LOQ
-23B,CB118,2021,10.1,Above LOQ
-23B,CB118,2022,10.3,Above LOQ
-23B,CD,1990,0.022,Above LOQ
-23B,CD,1991,0.024,Below LOQ
-23B,CD,1992,0.02,Below LOQ
-23B,CD,1993,0.025,Below LOQ
-23B,CD,1994,0.015,Above LOQ
-23B,CD,1995,0.026,Above LOQ
-23B,CD,1996,0.014,Above LOQ
-23B,CD,1997,0.029,Above LOQ
-23B,CD,1998,0.025,Below LOQ
-23B,CD,1999,0.033,Above LOQ
-23B,CD,2000,0.019,Above LOQ
-23B,CD,2001,0.025,Above LOQ
-23B,CD,2002,0.0206,Above LOQ
-23B,CD,2003,0.0163,Above LOQ
-23B,CD,2004,0.02285,Above LOQ
-23B,CD,2005,0.024,Above LOQ
-23B,CD,2006,0.0379,Above LOQ
-23B,CD,2007,0.022,Above LOQ
-23B,CD,2008,0.012,Above LOQ
-23B,CD,2009,0.018,Above LOQ
-23B,CD,2010,0.027,Above LOQ
-23B,CD,2011,0.033,Above LOQ
-23B,CD,2012,0.001,Below LOQ
-23B,CD,2013,0.017,Above LOQ
-23B,CD,2014,0.023,Above LOQ
-23B,CD,2015,0.023,Above LOQ
-23B,CD,2016,0.02,Above LOQ
-23B,CD,2017,0.036,Above LOQ
-23B,CD,2018,0.037,Above LOQ
-23B,CD,2019,0.038,Above LOQ
-23B,CD,2020,0.019,Above LOQ
-23B,CD,2021,0.01,Above LOQ
-23B,CD,2022,0.037,Above LOQ
-30B,CB118,1989,690,Above LOQ
-30B,CB118,1990,230.5,Above LOQ
-30B,CB118,1991,485.5,Above LOQ
-30B,CB118,1992,416,Above LOQ
-30B,CB118,1993,362,Above LOQ
-30B,CB118,1994,436,Above LOQ
-30B,CB118,1995,401,Above LOQ
-30B,CB118,1996,474.2,Above LOQ
-30B,CB118,1997,671.1,Above LOQ
-30B,CB118,1998,620,Above LOQ
-30B,CB118,1999,415,Above LOQ
-30B,CB118,2000,290,Above LOQ
-30B,CB118,2001,340,Above LOQ
-30B,CB118,2002,295,Above LOQ
-30B,CB118,2003,340,Above LOQ
-30B,CB118,2004,360,Above LOQ
-30B,CB118,2005,500,Above LOQ
-30B,CB118,2006,400,Above LOQ
-30B,CB118,2007,275,Above LOQ
-30B,CB118,2008,435,Above LOQ
-30B,CB118,2009,345,Above LOQ
-30B,CB118,2010,345,Above LOQ
-30B,CB118,2011,240,Above LOQ
-30B,CB118,2012,240,Above LOQ
-30B,CB118,2013,380,Above LOQ
-30B,CB118,2014,240,Above LOQ
-30B,CB118,2015,210,Above LOQ
-30B,CB118,2016,290,Above LOQ
-30B,CB118,2017,354.5,Above LOQ
-30B,CB118,2018,308.5,Above LOQ
-30B,CB118,2019,213.5,Above LOQ
-30B,CB118,2020,313.5,Above LOQ
-30B,CB118,2021,270,Above LOQ
-30B,CB118,2022,309,Above LOQ
-30B,CD,1984,0.01,Below LOQ
-30B,CD,1985,0.05,Below LOQ
-30B,CD,1986,0.06193,Above LOQ
-30B,CD,1987,0.0711,Below LOQ
-30B,CD,1988,0.02178,Below LOQ
-30B,CD,1989,0.02674,Below LOQ
-30B,CD,1990,0.035,Above LOQ
-30B,CD,1991,0.027,Below LOQ
-30B,CD,1992,0.1,Above LOQ
-30B,CD,1993,0.0645,Above LOQ
-30B,CD,1994,0.063,Above LOQ
-30B,CD,1995,0.049,Above LOQ
-30B,CD,1996,0.09062,Above LOQ
-30B,CD,1997,0.05762,Above LOQ
-30B,CD,1998,0.1239,Above LOQ
-30B,CD,1999,0.165,Above LOQ
-30B,CD,2000,0.078,Above LOQ
-30B,CD,2001,0.111,Above LOQ
-30B,CD,2002,0.106,Above LOQ
-30B,CD,2003,0.114,Above LOQ
-30B,CD,2004,0.1,Above LOQ
-30B,CD,2005,0.0734,Above LOQ
-30B,CD,2006,0.115,Above LOQ
-30B,CD,2007,0.19,Above LOQ
-30B,CD,2008,0.174,Above LOQ
-30B,CD,2009,0.163,Above LOQ
-30B,CD,2010,0.18,Above LOQ
-30B,CD,2011,0.125,Above LOQ
-30B,CD,2012,0.17,Above LOQ
-30B,CD,2013,0.15,Above LOQ
-30B,CD,2014,0.1,Above LOQ
-30B,CD,2015,0.18,Above LOQ
-30B,CD,2016,0.03,Above LOQ
-30B,CD,2017,0.112,Above LOQ
-30B,CD,2018,0.1045,Above LOQ
-30B,CD,2019,0.081,Above LOQ
-30B,CD,2020,0.0725,Above LOQ
-30B,CD,2021,0.077,Above LOQ
-30B,CD,2022,0.049,Above LOQ
-36B,CB118,1989,85,Below LOQ
-36B,CB118,1990,64,Above LOQ
-36B,CB118,1991,58.5,Above LOQ
-36B,CB118,1992,73.5,Above LOQ
-36B,CB118,1993,96.5,Above LOQ
-36B,CB118,1994,61,Above LOQ
-36B,CB118,1995,261,Above LOQ
-36B,CB118,1996,99,Above LOQ
-36B,CB118,1997,95,Above LOQ
-36B,CB118,1998,120,Above LOQ
-36B,CB118,1999,130,Above LOQ
-36B,CB118,2000,96,Above LOQ
-36B,CB118,2001,38.5,Above LOQ
-36B,CB118,2002,44,Above LOQ
-36B,CB118,2003,110,Above LOQ
-36B,CB118,2004,135,Above LOQ
-36B,CB118,2005,115,Above LOQ
-36B,CB118,2006,120,Above LOQ
-36B,CB118,2007,34.5,Above LOQ
-36B,CB118,2008,31.5,Above LOQ
-36B,CB118,2009,23,Above LOQ
-36B,CB118,2010,35.5,Above LOQ
-36B,CB118,2011,36.5,Above LOQ
-36B,CB118,2012,22,Above LOQ
-36B,CB118,2013,14.5,Above LOQ
-36B,CB118,2014,30,Above LOQ
-36B,CB118,2015,21,Above LOQ
-36B,CB118,2016,17,Above LOQ
-36B,CB118,2017,18.95,Above LOQ
-36B,CB118,2018,89.8,Above LOQ
-36B,CB118,2019,34,Above LOQ
-36B,CB118,2020,18.8,Above LOQ
-36B,CB118,2021,13.35,Above LOQ
-36B,CB118,2022,19.9,Above LOQ
-36B,CD,1981,0.0205,Below LOQ
-36B,CD,1982,0.06,Above LOQ
-36B,CD,1983,0.22,Above LOQ
-36B,CD,1984,0.07,Above LOQ
-36B,CD,1985,0.05,Above LOQ
-36B,CD,1986,0.137,Above LOQ
-36B,CD,1987,0.06108,Below LOQ
-36B,CD,1988,0.03144,Below LOQ
-36B,CD,1989,0.02803,Below LOQ
-36B,CD,1990,0.0235,Above LOQ
-36B,CD,1991,0.01,Below LOQ
-36B,CD,1992,0.021,Above LOQ
-36B,CD,1993,0.034,Above LOQ
-36B,CD,1994,0.021,Above LOQ
-36B,CD,1995,0.042,Above LOQ
-36B,CD,1996,0.033,Above LOQ
-36B,CD,1997,0.082,Above LOQ
-36B,CD,1998,0.036,Above LOQ
-36B,CD,1999,0.065,Above LOQ
-36B,CD,2000,0.041,Above LOQ
-36B,CD,2001,0.029,Above LOQ
-36B,CD,2002,0.0247,Above LOQ
-36B,CD,2003,0.0088,Above LOQ
-36B,CD,2004,0.0067,Above LOQ
-36B,CD,2005,0.029,Above LOQ
-36B,CD,2006,0.025,Above LOQ
-36B,CD,2007,0.034,Above LOQ
-36B,CD,2008,0.034,Above LOQ
-36B,CD,2009,0.025,Above LOQ
-36B,CD,2010,0.035,Above LOQ
-36B,CD,2011,0.02,Above LOQ
-36B,CD,2012,0.0445,Above LOQ
-36B,CD,2013,0.024,Above LOQ
-36B,CD,2014,0.036,Above LOQ
-36B,CD,2015,0.045,Above LOQ
-36B,CD,2016,0.032,Above LOQ
-36B,CD,2017,0.0195,Above LOQ
-36B,CD,2018,0.043,Above LOQ
-36B,CD,2019,0.035,Above LOQ
-36B,CD,2020,0.049,Above LOQ
-36B,CD,2021,0.0485,Above LOQ
-36B,CD,2022,0.018,Above LOQ
-53B,CB118,1989,360,Above LOQ
-53B,CB118,1990,45.5,Above LOQ
-53B,CB118,1991,45,Above LOQ
-53B,CB118,1992,178,Above LOQ
-53B,CB118,1993,17,Above LOQ
-53B,CB118,1994,20.5,Above LOQ
-53B,CB118,1995,16,Above LOQ
-53B,CB118,1996,113.3,Above LOQ
-53B,CB118,1997,48,Above LOQ
-53B,CB118,1998,438,Above LOQ
-53B,CB118,1999,49,Above LOQ
-53B,CB118,2000,150,Above LOQ
-53B,CB118,2001,110,Above LOQ
-53B,CB118,2002,105,Above LOQ
-53B,CB118,2003,32,Above LOQ
-53B,CB118,2004,65.5,Above LOQ
-53B,CB118,2005,14,Above LOQ
-53B,CB118,2006,36.5,Above LOQ
-53B,CB118,2007,100,Above LOQ
-53B,CB118,2008,14.5,Above LOQ
-53B,CB118,2009,47,Above LOQ
-53B,CB118,2010,74.5,Above LOQ
-53B,CB118,2011,55.5,Above LOQ
-53B,CB118,2012,24,Above LOQ
-53B,CB118,2013,132.5,Above LOQ
-53B,CB118,2014,190,Above LOQ
-53B,CB118,2015,46,Above LOQ
-53B,CB118,2016,56,Above LOQ
-53B,CB118,2017,230,Above LOQ
-53B,CB118,2018,44.3,Above LOQ
-53B,CB118,2019,78,Above LOQ
-53B,CB118,2020,26.9,Above LOQ
-53B,CB118,2021,17.3,Above LOQ
-53B,CB118,2022,10.2,Above LOQ
-53B,CD,1987,0.695,Above LOQ
-53B,CD,1988,0.058,Above LOQ
-53B,CD,1989,0.1024,Above LOQ
-53B,CD,1990,0.045,Below LOQ
-53B,CD,1991,0.149,Above LOQ
-53B,CD,1992,0.215,Above LOQ
-53B,CD,1993,0.038,Below LOQ
-53B,CD,1994,0.01,Below LOQ
-53B,CD,1995,0.007,Above LOQ
-53B,CD,1996,0.2628,Above LOQ
-53B,CD,1997,0.371,Above LOQ
-53B,CD,1998,0.2565,Above LOQ
-53B,CD,1999,0.733,Above LOQ
-53B,CD,2000,0.829,Above LOQ
-53B,CD,2001,0.565,Above LOQ
-53B,CD,2002,0.4315,Above LOQ
-53B,CD,2003,0.253,Above LOQ
-53B,CD,2004,0.368,Above LOQ
-53B,CD,2005,0.414,Above LOQ
-53B,CD,2006,0.2,Above LOQ
-53B,CD,2007,0.2795,Above LOQ
-53B,CD,2008,0.494,Above LOQ
-53B,CD,2009,0.2,Above LOQ
-53B,CD,2010,0.156,Above LOQ
-53B,CD,2011,0.0645,Above LOQ
-53B,CD,2012,0.097,Above LOQ
-53B,CD,2015,0.115,Above LOQ
-53B,CD,2016,0.052,Above LOQ
-53B,CD,2017,0.072,Above LOQ
-53B,CD,2018,0.042,Above LOQ
-53B,CD,2019,0.028,Above LOQ
-53B,CD,2020,0.028,Above LOQ
-53B,CD,2021,0.029,Above LOQ
-53B,CD,2022,0.033,Above LOQ
-98B1,CB118,1992,32.5,Above LOQ
-98B1,CB118,1993,21,Above LOQ
-98B1,CB118,1994,17.5,Below LOQ
-98B1,CB118,1995,34,Above LOQ
-98B1,CB118,1996,44,Above LOQ
-98B1,CB118,1997,53,Above LOQ
-98B1,CB118,1998,24,Below LOQ
-98B1,CB118,1999,17.5,Above LOQ
-98B1,CB118,2002,7.45,Below LOQ
-98B1,CB118,2003,15,Below LOQ
-98B1,CB118,2004,19,Below LOQ
-98B1,CB118,2005,9.95,Below LOQ
-98B1,CB118,2006,15,Below LOQ
-98B1,CB118,2007,17.5,Above LOQ
-98B1,CB118,2008,6.85,Below LOQ
-98B1,CB118,2009,2,Below LOQ
-98B1,CB118,2010,5.95,Below LOQ
-98B1,CB118,2011,6.65,Below LOQ
-98B1,CB118,2012,6.4,Above LOQ
-98B1,CB118,2013,4.9,Above LOQ
-98B1,CB118,2014,4.2,Above LOQ
-98B1,CB118,2015,30,Above LOQ
-98B1,CB118,2016,14,Above LOQ
-98B1,CB118,2017,10.6,Above LOQ
-98B1,CB118,2018,15.55,Above LOQ
-98B1,CB118,2019,22.1,Above LOQ
-98B1,CB118,2020,22.5,Above LOQ
-98B1,CB118,2021,24.1,Above LOQ
-98B1,CB118,2022,15.9,Above LOQ
-98B1,CD,1992,0.069,Above LOQ
-98B1,CD,1993,0.15,Above LOQ
-98B1,CD,1994,0.025,Above LOQ
-98B1,CD,1995,0.113,Above LOQ
-98B1,CD,1996,0.33,Above LOQ
-98B1,CD,1997,0.064,Above LOQ
-98B1,CD,1998,0.047,Above LOQ
-98B1,CD,1999,0.039,Above LOQ
-98B1,CD,2002,0.0291,Above LOQ
-98B1,CD,2003,0.0254,Above LOQ
-98B1,CD,2004,0.03325,Above LOQ
-98B1,CD,2005,0.051,Above LOQ
-98B1,CD,2006,0.0379,Above LOQ
-98B1,CD,2007,0.069,Above LOQ
-98B1,CD,2008,0.024,Above LOQ
-98B1,CD,2009,0.018,Above LOQ
-98B1,CD,2010,0.053,Above LOQ
-98B1,CD,2011,0.11,Above LOQ
-98B1,CD,2012,0.13,Above LOQ
-98B1,CD,2013,0.105,Above LOQ
-98B1,CD,2014,0.12,Above LOQ
-98B1,CD,2015,0.044,Above LOQ
-98B1,CD,2016,0.035,Above LOQ
-98B1,CD,2017,0.12,Above LOQ
-98B1,CD,2018,0.0415,Above LOQ
-98B1,CD,2019,0.041,Above LOQ
-98B1,CD,2020,0.056,Above LOQ
-98B1,CD,2021,0.058,Above LOQ
-98B1,CD,2022,0.038,Above LOQ
+STATION_CODE,LATIN_NAME,PARAM,MYEAR,concentration,loq
+10A2,Mytilus edulis,CB118,1996,0.14,Above LOQ
+10A2,Mytilus edulis,CB118,1997,0.16,Above LOQ
+10A2,Mytilus edulis,CB118,1999,0.12,Above LOQ
+10A2,Mytilus edulis,CB118,2000,0.12,Above LOQ
+10A2,Mytilus edulis,CB118,2001,0.15,Below LOQ
+10A2,Mytilus edulis,CB118,2002,0.1,Below LOQ
+10A2,Mytilus edulis,CB118,2003,0.1,Below LOQ
+10A2,Mytilus edulis,CB118,2004,0.05,Below LOQ
+10A2,Mytilus edulis,CB118,2005,0.08,Above LOQ
+10A2,Mytilus edulis,CB118,2006,0.21,Below LOQ
+10A2,Mytilus edulis,CB118,2007,0.07,Above LOQ
+10A2,Mytilus edulis,CB118,2008,0.08,Above LOQ
+10A2,Mytilus edulis,CB118,2009,0.08,Above LOQ
+10A2,Mytilus edulis,CB118,2010,0.05,Above LOQ
+10A2,Mytilus edulis,CB118,2011,0.06,Above LOQ
+10A2,Mytilus edulis,CB118,2012,0.05,Below LOQ
+10A2,Mytilus edulis,CB118,2013,0.05,Below LOQ
+10A2,Mytilus edulis,CB118,2014,0.05,Below LOQ
+10A2,Mytilus edulis,CB118,2015,0.05,Below LOQ
+10A2,Mytilus edulis,CB118,2016,0.05,Below LOQ
+10A2,Mytilus edulis,CB118,2017,0.0311,Below LOQ
+10A2,Mytilus edulis,CB118,2018,0.317,Above LOQ
+10A2,Mytilus edulis,CB118,2020,0.0342,Below LOQ
+10A2,Mytilus edulis,CB118,2021,0.101,Above LOQ
+10A2,Mytilus edulis,CB118,2022,0.0347,Below LOQ
+10A2,Mytilus edulis,CD,1996,0.47,Above LOQ
+10A2,Mytilus edulis,CD,1997,0.181,Above LOQ
+10A2,Mytilus edulis,CD,1998,0.384,Above LOQ
+10A2,Mytilus edulis,CD,1999,0.29,Above LOQ
+10A2,Mytilus edulis,CD,2000,0.275,Above LOQ
+10A2,Mytilus edulis,CD,2001,0.213,Above LOQ
+10A2,Mytilus edulis,CD,2002,0.234,Above LOQ
+10A2,Mytilus edulis,CD,2003,0.361,Above LOQ
+10A2,Mytilus edulis,CD,2004,0.298,Above LOQ
+10A2,Mytilus edulis,CD,2005,0.213,Above LOQ
+10A2,Mytilus edulis,CD,2006,0.294,Above LOQ
+10A2,Mytilus edulis,CD,2007,0.494,Above LOQ
+10A2,Mytilus edulis,CD,2008,0.352,Above LOQ
+10A2,Mytilus edulis,CD,2009,0.264,Above LOQ
+10A2,Mytilus edulis,CD,2010,0.332,Above LOQ
+10A2,Mytilus edulis,CD,2011,0.341,Above LOQ
+10A2,Mytilus edulis,CD,2012,0.29,Above LOQ
+10A2,Mytilus edulis,CD,2013,0.18,Above LOQ
+10A2,Mytilus edulis,CD,2014,0.35,Above LOQ
+10A2,Mytilus edulis,CD,2015,0.26,Above LOQ
+10A2,Mytilus edulis,CD,2016,0.33,Above LOQ
+10A2,Mytilus edulis,CD,2017,0.29,Above LOQ
+10A2,Mytilus edulis,CD,2018,0.43,Above LOQ
+10A2,Mytilus edulis,CD,2020,0.28,Above LOQ
+10A2,Mytilus edulis,CD,2021,0.37,Above LOQ
+10A2,Mytilus edulis,CD,2022,0.36,Above LOQ
+10B,Gadus morhua,CB118,1994,109.5,Above LOQ
+10B,Gadus morhua,CB118,1995,80,Above LOQ
+10B,Gadus morhua,CB118,1996,33.5,Above LOQ
+10B,Gadus morhua,CB118,1997,32,Above LOQ
+10B,Gadus morhua,CB118,1998,31,Above LOQ
+10B,Gadus morhua,CB118,1999,41.5,Above LOQ
+10B,Gadus morhua,CB118,2000,15,Above LOQ
+10B,Gadus morhua,CB118,2001,18,Above LOQ
+10B,Gadus morhua,CB118,2002,27,Above LOQ
+10B,Gadus morhua,CB118,2003,22,Above LOQ
+10B,Gadus morhua,CB118,2004,21.5,Above LOQ
+10B,Gadus morhua,CB118,2005,15,Below LOQ
+10B,Gadus morhua,CB118,2006,16,Above LOQ
+10B,Gadus morhua,CB118,2007,17,Above LOQ
+10B,Gadus morhua,CB118,2008,12.5,Above LOQ
+10B,Gadus morhua,CB118,2009,19.5,Above LOQ
+10B,Gadus morhua,CB118,2010,11.5,Below LOQ
+10B,Gadus morhua,CB118,2011,12.5,Above LOQ
+10B,Gadus morhua,CB118,2012,16,Above LOQ
+10B,Gadus morhua,CB118,2013,13,Above LOQ
+10B,Gadus morhua,CB118,2014,9,Above LOQ
+10B,Gadus morhua,CB118,2015,16,Above LOQ
+10B,Gadus morhua,CB118,2016,13,Above LOQ
+10B,Gadus morhua,CB118,2017,18.2,Above LOQ
+10B,Gadus morhua,CB118,2018,11.55,Above LOQ
+10B,Gadus morhua,CB118,2020,12.2,Above LOQ
+10B,Gadus morhua,CB118,2021,9.305,Above LOQ
+10B,Gadus morhua,CB118,2022,11.2,Above LOQ
+10B,Gadus morhua,CD,1994,0.23,Above LOQ
+10B,Gadus morhua,CD,1995,0.188,Above LOQ
+10B,Gadus morhua,CD,1996,0.095,Above LOQ
+10B,Gadus morhua,CD,1997,0.128,Above LOQ
+10B,Gadus morhua,CD,1998,0.119,Above LOQ
+10B,Gadus morhua,CD,1999,0.137,Above LOQ
+10B,Gadus morhua,CD,2000,0.125,Above LOQ
+10B,Gadus morhua,CD,2001,0.129,Above LOQ
+10B,Gadus morhua,CD,2002,0.059,Above LOQ
+10B,Gadus morhua,CD,2003,0.099,Above LOQ
+10B,Gadus morhua,CD,2004,0.103,Above LOQ
+10B,Gadus morhua,CD,2005,0.079,Above LOQ
+10B,Gadus morhua,CD,2006,0.0779,Above LOQ
+10B,Gadus morhua,CD,2007,0.082,Above LOQ
+10B,Gadus morhua,CD,2008,0.092,Above LOQ
+10B,Gadus morhua,CD,2009,0.06,Above LOQ
+10B,Gadus morhua,CD,2010,0.083,Above LOQ
+10B,Gadus morhua,CD,2011,0.102,Above LOQ
+10B,Gadus morhua,CD,2012,0.081,Above LOQ
+10B,Gadus morhua,CD,2013,0.074,Above LOQ
+10B,Gadus morhua,CD,2014,0.053,Above LOQ
+10B,Gadus morhua,CD,2015,0.12,Above LOQ
+10B,Gadus morhua,CD,2016,0.11,Above LOQ
+10B,Gadus morhua,CD,2017,0.21,Above LOQ
+10B,Gadus morhua,CD,2018,0.19,Above LOQ
+10B,Gadus morhua,CD,2020,0.098,Above LOQ
+10B,Gadus morhua,CD,2021,0.135,Above LOQ
+10B,Gadus morhua,CD,2022,0.13,Above LOQ
+11X,Mytilus edulis,CB118,1997,0.07,Above LOQ
+11X,Mytilus edulis,CB118,1998,0.12,Above LOQ
+11X,Mytilus edulis,CB118,1999,0.15,Above LOQ
+11X,Mytilus edulis,CB118,2000,0.07,Above LOQ
+11X,Mytilus edulis,CB118,2001,0.15,Below LOQ
+11X,Mytilus edulis,CB118,2002,0.1,Below LOQ
+11X,Mytilus edulis,CB118,2003,0.1,Below LOQ
+11X,Mytilus edulis,CB118,2004,0.05,Below LOQ
+11X,Mytilus edulis,CB118,2005,0.13,Above LOQ
+11X,Mytilus edulis,CB118,2006,0.09,Above LOQ
+11X,Mytilus edulis,CB118,2007,0.07,Above LOQ
+11X,Mytilus edulis,CB118,2008,0.09,Above LOQ
+11X,Mytilus edulis,CB118,2009,0.2,Above LOQ
+11X,Mytilus edulis,CB118,2010,0.08,Above LOQ
+11X,Mytilus edulis,CB118,2011,0.07,Above LOQ
+11X,Mytilus edulis,CB118,2012,0.05,Below LOQ
+11X,Mytilus edulis,CB118,2013,0.05,Below LOQ
+11X,Mytilus edulis,CB118,2014,0.05,Below LOQ
+11X,Mytilus edulis,CB118,2015,0.05,Below LOQ
+11X,Mytilus edulis,CB118,2016,0.05,Below LOQ
+11X,Mytilus edulis,CB118,2017,0.0347,Below LOQ
+11X,Mytilus edulis,CB118,2018,0.0931,Above LOQ
+11X,Mytilus edulis,CB118,2020,0.0402,Below LOQ
+11X,Mytilus edulis,CB118,2021,0.0657,Above LOQ
+11X,Mytilus edulis,CB118,2022,0.035,Below LOQ
+11X,Mytilus edulis,CD,1997,0.244,Above LOQ
+11X,Mytilus edulis,CD,1998,0.13,Above LOQ
+11X,Mytilus edulis,CD,1999,0.221,Above LOQ
+11X,Mytilus edulis,CD,2000,0.174,Above LOQ
+11X,Mytilus edulis,CD,2001,0.261,Above LOQ
+11X,Mytilus edulis,CD,2002,0.288,Above LOQ
+11X,Mytilus edulis,CD,2003,0.293,Above LOQ
+11X,Mytilus edulis,CD,2004,0.163,Above LOQ
+11X,Mytilus edulis,CD,2005,0.206,Above LOQ
+11X,Mytilus edulis,CD,2006,0.168,Above LOQ
+11X,Mytilus edulis,CD,2007,0.224,Above LOQ
+11X,Mytilus edulis,CD,2008,0.2,Above LOQ
+11X,Mytilus edulis,CD,2009,0.214,Above LOQ
+11X,Mytilus edulis,CD,2010,0.233,Above LOQ
+11X,Mytilus edulis,CD,2011,0.193,Above LOQ
+11X,Mytilus edulis,CD,2012,0.18,Above LOQ
+11X,Mytilus edulis,CD,2013,0.17,Above LOQ
+11X,Mytilus edulis,CD,2014,0.18,Above LOQ
+11X,Mytilus edulis,CD,2015,0.23,Above LOQ
+11X,Mytilus edulis,CD,2016,0.19,Above LOQ
+11X,Mytilus edulis,CD,2017,0.25,Above LOQ
+11X,Mytilus edulis,CD,2018,0.22,Above LOQ
+11X,Mytilus edulis,CD,2020,0.24,Above LOQ
+11X,Mytilus edulis,CD,2021,0.22,Above LOQ
+11X,Mytilus edulis,CD,2022,0.22,Above LOQ
+15A,Mytilus edulis,CB118,1990,0.35,Above LOQ
+15A,Mytilus edulis,CB118,1993,0.1,Above LOQ
+15A,Mytilus edulis,CB118,1994,0.19,Above LOQ
+15A,Mytilus edulis,CB118,1995,0.1,Below LOQ
+15A,Mytilus edulis,CB118,1996,0.05,Below LOQ
+15A,Mytilus edulis,CB118,1997,0.1,Above LOQ
+15A,Mytilus edulis,CB118,1998,0.1,Above LOQ
+15A,Mytilus edulis,CB118,1999,0.16,Above LOQ
+15A,Mytilus edulis,CB118,2000,0.06,Below LOQ
+15A,Mytilus edulis,CB118,2001,0.15,Below LOQ
+15A,Mytilus edulis,CB118,2002,0.1,Below LOQ
+15A,Mytilus edulis,CB118,2003,0.1,Below LOQ
+15A,Mytilus edulis,CB118,2004,0.06,Above LOQ
+15A,Mytilus edulis,CB118,2005,0.08,Above LOQ
+15A,Mytilus edulis,CB118,2006,0.06,Below LOQ
+15A,Mytilus edulis,CB118,2007,0.05,Below LOQ
+15A,Mytilus edulis,CB118,2008,0.1,Above LOQ
+15A,Mytilus edulis,CB118,2009,0.08,Above LOQ
+15A,Mytilus edulis,CB118,2010,0.05,Above LOQ
+15A,Mytilus edulis,CB118,2011,0.06,Above LOQ
+15A,Mytilus edulis,CB118,2012,0.068,Above LOQ
+15A,Mytilus edulis,CB118,2013,0.072,Above LOQ
+15A,Mytilus edulis,CB118,2014,0.05,Below LOQ
+15A,Mytilus edulis,CB118,2015,0.05,Below LOQ
+15A,Mytilus edulis,CB118,2016,0.05,Below LOQ
+15A,Mytilus edulis,CB118,2017,0.055,Above LOQ
+15A,Mytilus edulis,CB118,2018,0.0819,Above LOQ
+15A,Mytilus edulis,CB118,2019,0.122,Above LOQ
+15A,Mytilus edulis,CB118,2020,0.0451,Below LOQ
+15A,Mytilus edulis,CB118,2021,0.0482,Above LOQ
+15A,Mytilus edulis,CB118,2022,0.104,Above LOQ
+15A,Mytilus edulis,CD,1990,0.09,Above LOQ
+15A,Mytilus edulis,CD,1991,0.13,Above LOQ
+15A,Mytilus edulis,CD,1993,0.25,Above LOQ
+15A,Mytilus edulis,CD,1994,0.158,Above LOQ
+15A,Mytilus edulis,CD,1995,0.331,Above LOQ
+15A,Mytilus edulis,CD,1996,0.2,Above LOQ
+15A,Mytilus edulis,CD,1997,0.219,Above LOQ
+15A,Mytilus edulis,CD,1998,0.19,Above LOQ
+15A,Mytilus edulis,CD,1999,0.196,Above LOQ
+15A,Mytilus edulis,CD,2000,0.242,Above LOQ
+15A,Mytilus edulis,CD,2001,0.845,Above LOQ
+15A,Mytilus edulis,CD,2002,0.261,Above LOQ
+15A,Mytilus edulis,CD,2003,0.112,Above LOQ
+15A,Mytilus edulis,CD,2004,0.137,Above LOQ
+15A,Mytilus edulis,CD,2005,0.128,Above LOQ
+15A,Mytilus edulis,CD,2006,0.173,Above LOQ
+15A,Mytilus edulis,CD,2007,0.116,Above LOQ
+15A,Mytilus edulis,CD,2008,0.12,Above LOQ
+15A,Mytilus edulis,CD,2009,0.142,Above LOQ
+15A,Mytilus edulis,CD,2010,0.195,Above LOQ
+15A,Mytilus edulis,CD,2011,0.212,Above LOQ
+15A,Mytilus edulis,CD,2012,0.13,Above LOQ
+15A,Mytilus edulis,CD,2013,0.15,Above LOQ
+15A,Mytilus edulis,CD,2014,0.11,Above LOQ
+15A,Mytilus edulis,CD,2015,0.15,Above LOQ
+15A,Mytilus edulis,CD,2016,0.12,Above LOQ
+15A,Mytilus edulis,CD,2017,0.14,Above LOQ
+15A,Mytilus edulis,CD,2018,0.14,Above LOQ
+15A,Mytilus edulis,CD,2019,0.15,Above LOQ
+15A,Mytilus edulis,CD,2020,0.15,Above LOQ
+15A,Mytilus edulis,CD,2021,0.13,Above LOQ
+15A,Mytilus edulis,CD,2022,0.13,Above LOQ
+15B,Gadus morhua,CB118,1990,22,Below LOQ
+15B,Gadus morhua,CB118,1991,45,Above LOQ
+15B,Gadus morhua,CB118,1992,34,Above LOQ
+15B,Gadus morhua,CB118,1993,26,Above LOQ
+15B,Gadus morhua,CB118,1994,29,Above LOQ
+15B,Gadus morhua,CB118,1995,34,Above LOQ
+15B,Gadus morhua,CB118,1996,34.5,Above LOQ
+15B,Gadus morhua,CB118,1997,44.5,Above LOQ
+15B,Gadus morhua,CB118,1998,30,Above LOQ
+15B,Gadus morhua,CB118,1999,30,Above LOQ
+15B,Gadus morhua,CB118,2000,18,Above LOQ
+15B,Gadus morhua,CB118,2001,40.5,Above LOQ
+15B,Gadus morhua,CB118,2002,28.5,Above LOQ
+15B,Gadus morhua,CB118,2003,27,Above LOQ
+15B,Gadus morhua,CB118,2004,15,Below LOQ
+15B,Gadus morhua,CB118,2005,24,Above LOQ
+15B,Gadus morhua,CB118,2006,19,Above LOQ
+15B,Gadus morhua,CB118,2007,20,Below LOQ
+15B,Gadus morhua,CB118,2008,15,Above LOQ
+15B,Gadus morhua,CB118,2009,13.5,Above LOQ
+15B,Gadus morhua,CB118,2010,18,Above LOQ
+15B,Gadus morhua,CB118,2011,17,Above LOQ
+15B,Gadus morhua,CB118,2012,25,Above LOQ
+15B,Gadus morhua,CB118,2013,19,Above LOQ
+15B,Gadus morhua,CB118,2014,12,Above LOQ
+15B,Gadus morhua,CB118,2015,11,Above LOQ
+15B,Gadus morhua,CB118,2016,16,Above LOQ
+15B,Gadus morhua,CB118,2017,14.4,Above LOQ
+15B,Gadus morhua,CB118,2018,17.9,Above LOQ
+15B,Gadus morhua,CB118,2019,9.58,Above LOQ
+15B,Gadus morhua,CB118,2020,16.2,Above LOQ
+15B,Gadus morhua,CB118,2021,14.5,Above LOQ
+15B,Gadus morhua,CB118,2022,12.5,Above LOQ
+15B,Gadus morhua,CD,1990,0.026,Above LOQ
+15B,Gadus morhua,CD,1991,0.009,Below LOQ
+15B,Gadus morhua,CD,1992,0.025,Above LOQ
+15B,Gadus morhua,CD,1993,0.016,Above LOQ
+15B,Gadus morhua,CD,1994,0.014,Above LOQ
+15B,Gadus morhua,CD,1995,0.016,Above LOQ
+15B,Gadus morhua,CD,1996,0.024,Above LOQ
+15B,Gadus morhua,CD,1997,0.031,Above LOQ
+15B,Gadus morhua,CD,1998,0.03,Above LOQ
+15B,Gadus morhua,CD,1999,0.026,Above LOQ
+15B,Gadus morhua,CD,2000,0.033,Above LOQ
+15B,Gadus morhua,CD,2001,0.026,Above LOQ
+15B,Gadus morhua,CD,2002,0.0183,Above LOQ
+15B,Gadus morhua,CD,2003,0.0374,Above LOQ
+15B,Gadus morhua,CD,2004,0.0097,Above LOQ
+15B,Gadus morhua,CD,2005,0.019,Above LOQ
+15B,Gadus morhua,CD,2006,0.0058,Above LOQ
+15B,Gadus morhua,CD,2007,0.023,Above LOQ
+15B,Gadus morhua,CD,2008,0.018,Above LOQ
+15B,Gadus morhua,CD,2009,0.02,Above LOQ
+15B,Gadus morhua,CD,2010,0.021,Above LOQ
+15B,Gadus morhua,CD,2011,0.017,Above LOQ
+15B,Gadus morhua,CD,2012,0.032,Above LOQ
+15B,Gadus morhua,CD,2013,0.032,Above LOQ
+15B,Gadus morhua,CD,2014,0.026,Above LOQ
+15B,Gadus morhua,CD,2015,0.015,Above LOQ
+15B,Gadus morhua,CD,2016,0.022,Above LOQ
+15B,Gadus morhua,CD,2017,0.024,Above LOQ
+15B,Gadus morhua,CD,2018,0.038,Above LOQ
+15B,Gadus morhua,CD,2019,0.021,Above LOQ
+15B,Gadus morhua,CD,2020,0.027,Above LOQ
+15B,Gadus morhua,CD,2021,0.024,Above LOQ
+15B,Gadus morhua,CD,2022,0.025,Above LOQ
+22A,Mytilus edulis,CB118,1990,0.38,Above LOQ
+22A,Mytilus edulis,CB118,1991,0.4,Below LOQ
+22A,Mytilus edulis,CB118,1992,0.2,Above LOQ
+22A,Mytilus edulis,CB118,1993,0.1,Above LOQ
+22A,Mytilus edulis,CB118,1994,0.32,Above LOQ
+22A,Mytilus edulis,CB118,1995,0.2,Above LOQ
+22A,Mytilus edulis,CB118,1996,0.12,Above LOQ
+22A,Mytilus edulis,CB118,1997,0.12,Above LOQ
+22A,Mytilus edulis,CB118,1998,0.27,Above LOQ
+22A,Mytilus edulis,CB118,1999,0.15,Above LOQ
+22A,Mytilus edulis,CB118,2000,0.12,Above LOQ
+22A,Mytilus edulis,CB118,2001,0.15,Below LOQ
+22A,Mytilus edulis,CB118,2002,0.1,Below LOQ
+22A,Mytilus edulis,CB118,2003,0.18,Above LOQ
+22A,Mytilus edulis,CB118,2004,0.11,Above LOQ
+22A,Mytilus edulis,CB118,2005,0.24,Above LOQ
+22A,Mytilus edulis,CB118,2006,0.16,Above LOQ
+22A,Mytilus edulis,CB118,2007,0.12,Below LOQ
+22A,Mytilus edulis,CB118,2008,0.2,Above LOQ
+22A,Mytilus edulis,CB118,2009,0.19,Above LOQ
+22A,Mytilus edulis,CB118,2010,0.2,Below LOQ
+22A,Mytilus edulis,CB118,2011,0.09,Above LOQ
+22A,Mytilus edulis,CB118,2012,0.095,Above LOQ
+22A,Mytilus edulis,CB118,2013,0.076,Above LOQ
+22A,Mytilus edulis,CB118,2014,0.095,Above LOQ
+22A,Mytilus edulis,CB118,2015,0.075,Above LOQ
+22A,Mytilus edulis,CB118,2016,0.13,Above LOQ
+22A,Mytilus edulis,CB118,2017,0.117,Above LOQ
+22A,Mytilus edulis,CB118,2018,0.195,Above LOQ
+22A,Mytilus edulis,CB118,2019,0.12,Above LOQ
+22A,Mytilus edulis,CB118,2020,0.145,Above LOQ
+22A,Mytilus edulis,CB118,2021,0.221,Above LOQ
+22A,Mytilus edulis,CB118,2022,0.219,Above LOQ
+22A,Mytilus edulis,CD,1990,0.1,Above LOQ
+22A,Mytilus edulis,CD,1991,0.19,Above LOQ
+22A,Mytilus edulis,CD,1992,0.2,Above LOQ
+22A,Mytilus edulis,CD,1993,0.19,Above LOQ
+22A,Mytilus edulis,CD,1994,0.212,Above LOQ
+22A,Mytilus edulis,CD,1995,0.28,Above LOQ
+22A,Mytilus edulis,CD,1996,0.19,Above LOQ
+22A,Mytilus edulis,CD,1997,0.17,Above LOQ
+22A,Mytilus edulis,CD,1998,0.159,Above LOQ
+22A,Mytilus edulis,CD,1999,0.209,Above LOQ
+22A,Mytilus edulis,CD,2000,0.559,Above LOQ
+22A,Mytilus edulis,CD,2001,0.338,Above LOQ
+22A,Mytilus edulis,CD,2002,0.202,Above LOQ
+22A,Mytilus edulis,CD,2003,0.157,Above LOQ
+22A,Mytilus edulis,CD,2004,0.162,Above LOQ
+22A,Mytilus edulis,CD,2005,0.155,Above LOQ
+22A,Mytilus edulis,CD,2006,0.152,Above LOQ
+22A,Mytilus edulis,CD,2007,0.194,Above LOQ
+22A,Mytilus edulis,CD,2008,0.163,Above LOQ
+22A,Mytilus edulis,CD,2009,0.201,Above LOQ
+22A,Mytilus edulis,CD,2010,0.142,Above LOQ
+22A,Mytilus edulis,CD,2011,0.15,Above LOQ
+22A,Mytilus edulis,CD,2012,0.11,Above LOQ
+22A,Mytilus edulis,CD,2013,0.077,Above LOQ
+22A,Mytilus edulis,CD,2014,0.13,Above LOQ
+22A,Mytilus edulis,CD,2015,0.17,Above LOQ
+22A,Mytilus edulis,CD,2016,0.14,Above LOQ
+22A,Mytilus edulis,CD,2017,0.093,Above LOQ
+22A,Mytilus edulis,CD,2018,0.074,Above LOQ
+22A,Mytilus edulis,CD,2019,0.11,Above LOQ
+22A,Mytilus edulis,CD,2020,0.17,Above LOQ
+22A,Mytilus edulis,CD,2021,0.09,Above LOQ
+22A,Mytilus edulis,CD,2022,0.088,Above LOQ
+23B,Gadus morhua,CB118,1990,27.5,Below LOQ
+23B,Gadus morhua,CB118,1991,13,Above LOQ
+23B,Gadus morhua,CB118,1992,29,Above LOQ
+23B,Gadus morhua,CB118,1993,29.5,Above LOQ
+23B,Gadus morhua,CB118,1994,15,Below LOQ
+23B,Gadus morhua,CB118,1995,24,Above LOQ
+23B,Gadus morhua,CB118,1996,22.5,Above LOQ
+23B,Gadus morhua,CB118,1997,13.5,Above LOQ
+23B,Gadus morhua,CB118,1998,21,Above LOQ
+23B,Gadus morhua,CB118,1999,25.5,Below LOQ
+23B,Gadus morhua,CB118,2000,24.5,Above LOQ
+23B,Gadus morhua,CB118,2001,19,Above LOQ
+23B,Gadus morhua,CB118,2002,13,Above LOQ
+23B,Gadus morhua,CB118,2003,12,Below LOQ
+23B,Gadus morhua,CB118,2004,28.5,Below LOQ
+23B,Gadus morhua,CB118,2005,25.5,Above LOQ
+23B,Gadus morhua,CB118,2006,13.5,Above LOQ
+23B,Gadus morhua,CB118,2007,18,Below LOQ
+23B,Gadus morhua,CB118,2008,6.9,Below LOQ
+23B,Gadus morhua,CB118,2009,10.5,Above LOQ
+23B,Gadus morhua,CB118,2010,10.5,Below LOQ
+23B,Gadus morhua,CB118,2011,15.5,Above LOQ
+23B,Gadus morhua,CB118,2012,15,Below LOQ
+23B,Gadus morhua,CB118,2013,17,Above LOQ
+23B,Gadus morhua,CB118,2014,14,Above LOQ
+23B,Gadus morhua,CB118,2015,10,Above LOQ
+23B,Gadus morhua,CB118,2016,11,Above LOQ
+23B,Gadus morhua,CB118,2017,16.3,Above LOQ
+23B,Gadus morhua,CB118,2018,13.15,Above LOQ
+23B,Gadus morhua,CB118,2019,17.4,Above LOQ
+23B,Gadus morhua,CB118,2020,16.6,Above LOQ
+23B,Gadus morhua,CB118,2021,10.1,Above LOQ
+23B,Gadus morhua,CB118,2022,10.3,Above LOQ
+23B,Gadus morhua,CD,1990,0.022,Above LOQ
+23B,Gadus morhua,CD,1991,0.024,Below LOQ
+23B,Gadus morhua,CD,1992,0.02,Below LOQ
+23B,Gadus morhua,CD,1993,0.025,Below LOQ
+23B,Gadus morhua,CD,1994,0.015,Above LOQ
+23B,Gadus morhua,CD,1995,0.026,Above LOQ
+23B,Gadus morhua,CD,1996,0.014,Above LOQ
+23B,Gadus morhua,CD,1997,0.029,Above LOQ
+23B,Gadus morhua,CD,1998,0.025,Below LOQ
+23B,Gadus morhua,CD,1999,0.033,Above LOQ
+23B,Gadus morhua,CD,2000,0.019,Above LOQ
+23B,Gadus morhua,CD,2001,0.025,Above LOQ
+23B,Gadus morhua,CD,2002,0.0206,Above LOQ
+23B,Gadus morhua,CD,2003,0.0163,Above LOQ
+23B,Gadus morhua,CD,2004,0.02285,Above LOQ
+23B,Gadus morhua,CD,2005,0.024,Above LOQ
+23B,Gadus morhua,CD,2006,0.0379,Above LOQ
+23B,Gadus morhua,CD,2007,0.022,Above LOQ
+23B,Gadus morhua,CD,2008,0.012,Above LOQ
+23B,Gadus morhua,CD,2009,0.018,Above LOQ
+23B,Gadus morhua,CD,2010,0.027,Above LOQ
+23B,Gadus morhua,CD,2011,0.033,Above LOQ
+23B,Gadus morhua,CD,2012,0.001,Below LOQ
+23B,Gadus morhua,CD,2013,0.017,Above LOQ
+23B,Gadus morhua,CD,2014,0.023,Above LOQ
+23B,Gadus morhua,CD,2015,0.023,Above LOQ
+23B,Gadus morhua,CD,2016,0.02,Above LOQ
+23B,Gadus morhua,CD,2017,0.036,Above LOQ
+23B,Gadus morhua,CD,2018,0.037,Above LOQ
+23B,Gadus morhua,CD,2019,0.038,Above LOQ
+23B,Gadus morhua,CD,2020,0.019,Above LOQ
+23B,Gadus morhua,CD,2021,0.01,Above LOQ
+23B,Gadus morhua,CD,2022,0.037,Above LOQ
+30A,Mytilus edulis,CB118,1989,2.3,Above LOQ
+30A,Mytilus edulis,CB118,1990,3.1,Above LOQ
+30A,Mytilus edulis,CB118,1991,3.6,Above LOQ
+30A,Mytilus edulis,CB118,1992,3.9,Above LOQ
+30A,Mytilus edulis,CB118,1993,1.4,Above LOQ
+30A,Mytilus edulis,CB118,1994,2.97,Above LOQ
+30A,Mytilus edulis,CB118,1995,4.64,Above LOQ
+30A,Mytilus edulis,CB118,1996,3.85,Above LOQ
+30A,Mytilus edulis,CB118,1997,4.3,Above LOQ
+30A,Mytilus edulis,CB118,1998,1.7,Above LOQ
+30A,Mytilus edulis,CB118,1999,2.2,Above LOQ
+30A,Mytilus edulis,CB118,2000,1.4,Above LOQ
+30A,Mytilus edulis,CB118,2001,1.1,Above LOQ
+30A,Mytilus edulis,CB118,2002,0.92,Above LOQ
+30A,Mytilus edulis,CB118,2003,1.2,Above LOQ
+30A,Mytilus edulis,CB118,2004,0.52,Above LOQ
+30A,Mytilus edulis,CB118,2005,1.8,Above LOQ
+30A,Mytilus edulis,CB118,2006,0.71,Above LOQ
+30A,Mytilus edulis,CB118,2007,1.3,Above LOQ
+30A,Mytilus edulis,CB118,2008,1.4,Above LOQ
+30A,Mytilus edulis,CB118,2009,1.2,Above LOQ
+30A,Mytilus edulis,CB118,2010,0.65,Above LOQ
+30A,Mytilus edulis,CB118,2011,0.45,Above LOQ
+30A,Mytilus edulis,CB118,2012,0.83,Above LOQ
+30A,Mytilus edulis,CB118,2013,1.1,Above LOQ
+30A,Mytilus edulis,CB118,2014,0.49,Above LOQ
+30A,Mytilus edulis,CB118,2015,1.1,Above LOQ
+30A,Mytilus edulis,CB118,2016,0.72,Above LOQ
+30A,Mytilus edulis,CB118,2017,0.995,Above LOQ
+30A,Mytilus edulis,CB118,2018,0.823,Above LOQ
+30A,Mytilus edulis,CB118,2019,0.821,Above LOQ
+30A,Mytilus edulis,CB118,2020,2.67,Above LOQ
+30A,Mytilus edulis,CB118,2021,1.71,Above LOQ
+30A,Mytilus edulis,CB118,2022,0.68,Above LOQ
+30A,Mytilus edulis,CD,1984,0.18,Above LOQ
+30A,Mytilus edulis,CD,1985,0.1798,Above LOQ
+30A,Mytilus edulis,CD,1986,0.2701,Above LOQ
+30A,Mytilus edulis,CD,1987,0.126,Above LOQ
+30A,Mytilus edulis,CD,1988,0.1061,Above LOQ
+30A,Mytilus edulis,CD,1989,0.17,Above LOQ
+30A,Mytilus edulis,CD,1990,0.12,Above LOQ
+30A,Mytilus edulis,CD,1991,0.13,Above LOQ
+30A,Mytilus edulis,CD,1992,0.22,Above LOQ
+30A,Mytilus edulis,CD,1993,0.22,Above LOQ
+30A,Mytilus edulis,CD,1994,0.213,Above LOQ
+30A,Mytilus edulis,CD,1995,0.154,Above LOQ
+30A,Mytilus edulis,CD,1996,0.15,Above LOQ
+30A,Mytilus edulis,CD,1997,0.158,Above LOQ
+30A,Mytilus edulis,CD,1998,0.214,Above LOQ
+30A,Mytilus edulis,CD,1999,0.194,Above LOQ
+30A,Mytilus edulis,CD,2000,0.189,Above LOQ
+30A,Mytilus edulis,CD,2001,0.189,Above LOQ
+30A,Mytilus edulis,CD,2002,0.242,Above LOQ
+30A,Mytilus edulis,CD,2003,0.231,Above LOQ
+30A,Mytilus edulis,CD,2004,0.266,Above LOQ
+30A,Mytilus edulis,CD,2005,0.269,Above LOQ
+30A,Mytilus edulis,CD,2006,0.227,Above LOQ
+30A,Mytilus edulis,CD,2007,0.242,Above LOQ
+30A,Mytilus edulis,CD,2008,0.284,Above LOQ
+30A,Mytilus edulis,CD,2009,0.217,Above LOQ
+30A,Mytilus edulis,CD,2010,0.273,Above LOQ
+30A,Mytilus edulis,CD,2011,0.305,Above LOQ
+30A,Mytilus edulis,CD,2012,0.26,Above LOQ
+30A,Mytilus edulis,CD,2013,0.14,Above LOQ
+30A,Mytilus edulis,CD,2014,0.17,Above LOQ
+30A,Mytilus edulis,CD,2015,0.2,Above LOQ
+30A,Mytilus edulis,CD,2016,0.14,Above LOQ
+30A,Mytilus edulis,CD,2017,0.18,Above LOQ
+30A,Mytilus edulis,CD,2018,0.2,Above LOQ
+30A,Mytilus edulis,CD,2019,0.17,Above LOQ
+30A,Mytilus edulis,CD,2020,0.18,Above LOQ
+30A,Mytilus edulis,CD,2021,0.26,Above LOQ
+30A,Mytilus edulis,CD,2022,0.2,Above LOQ
+30B,Gadus morhua,CB118,1989,690,Above LOQ
+30B,Gadus morhua,CB118,1990,230.5,Above LOQ
+30B,Gadus morhua,CB118,1991,485.5,Above LOQ
+30B,Gadus morhua,CB118,1992,416,Above LOQ
+30B,Gadus morhua,CB118,1993,362,Above LOQ
+30B,Gadus morhua,CB118,1994,436,Above LOQ
+30B,Gadus morhua,CB118,1995,401,Above LOQ
+30B,Gadus morhua,CB118,1996,474.2,Above LOQ
+30B,Gadus morhua,CB118,1997,671.1,Above LOQ
+30B,Gadus morhua,CB118,1998,620,Above LOQ
+30B,Gadus morhua,CB118,1999,415,Above LOQ
+30B,Gadus morhua,CB118,2000,290,Above LOQ
+30B,Gadus morhua,CB118,2001,340,Above LOQ
+30B,Gadus morhua,CB118,2002,295,Above LOQ
+30B,Gadus morhua,CB118,2003,340,Above LOQ
+30B,Gadus morhua,CB118,2004,360,Above LOQ
+30B,Gadus morhua,CB118,2005,500,Above LOQ
+30B,Gadus morhua,CB118,2006,400,Above LOQ
+30B,Gadus morhua,CB118,2007,275,Above LOQ
+30B,Gadus morhua,CB118,2008,435,Above LOQ
+30B,Gadus morhua,CB118,2009,345,Above LOQ
+30B,Gadus morhua,CB118,2010,345,Above LOQ
+30B,Gadus morhua,CB118,2011,240,Above LOQ
+30B,Gadus morhua,CB118,2012,240,Above LOQ
+30B,Gadus morhua,CB118,2013,380,Above LOQ
+30B,Gadus morhua,CB118,2014,240,Above LOQ
+30B,Gadus morhua,CB118,2015,210,Above LOQ
+30B,Gadus morhua,CB118,2016,290,Above LOQ
+30B,Gadus morhua,CB118,2017,354.5,Above LOQ
+30B,Gadus morhua,CB118,2018,308.5,Above LOQ
+30B,Gadus morhua,CB118,2019,213.5,Above LOQ
+30B,Gadus morhua,CB118,2020,313.5,Above LOQ
+30B,Gadus morhua,CB118,2021,270,Above LOQ
+30B,Gadus morhua,CB118,2022,309,Above LOQ
+30B,Gadus morhua,CD,1984,0.01,Below LOQ
+30B,Gadus morhua,CD,1985,0.05,Below LOQ
+30B,Gadus morhua,CD,1986,0.06193,Above LOQ
+30B,Gadus morhua,CD,1987,0.0711,Below LOQ
+30B,Gadus morhua,CD,1988,0.02178,Below LOQ
+30B,Gadus morhua,CD,1989,0.02674,Below LOQ
+30B,Gadus morhua,CD,1990,0.035,Above LOQ
+30B,Gadus morhua,CD,1991,0.027,Below LOQ
+30B,Gadus morhua,CD,1992,0.1,Above LOQ
+30B,Gadus morhua,CD,1993,0.0645,Above LOQ
+30B,Gadus morhua,CD,1994,0.063,Above LOQ
+30B,Gadus morhua,CD,1995,0.049,Above LOQ
+30B,Gadus morhua,CD,1996,0.09062,Above LOQ
+30B,Gadus morhua,CD,1997,0.05762,Above LOQ
+30B,Gadus morhua,CD,1998,0.1239,Above LOQ
+30B,Gadus morhua,CD,1999,0.165,Above LOQ
+30B,Gadus morhua,CD,2000,0.078,Above LOQ
+30B,Gadus morhua,CD,2001,0.111,Above LOQ
+30B,Gadus morhua,CD,2002,0.106,Above LOQ
+30B,Gadus morhua,CD,2003,0.114,Above LOQ
+30B,Gadus morhua,CD,2004,0.1,Above LOQ
+30B,Gadus morhua,CD,2005,0.0734,Above LOQ
+30B,Gadus morhua,CD,2006,0.115,Above LOQ
+30B,Gadus morhua,CD,2007,0.19,Above LOQ
+30B,Gadus morhua,CD,2008,0.174,Above LOQ
+30B,Gadus morhua,CD,2009,0.163,Above LOQ
+30B,Gadus morhua,CD,2010,0.18,Above LOQ
+30B,Gadus morhua,CD,2011,0.125,Above LOQ
+30B,Gadus morhua,CD,2012,0.17,Above LOQ
+30B,Gadus morhua,CD,2013,0.15,Above LOQ
+30B,Gadus morhua,CD,2014,0.1,Above LOQ
+30B,Gadus morhua,CD,2015,0.18,Above LOQ
+30B,Gadus morhua,CD,2016,0.03,Above LOQ
+30B,Gadus morhua,CD,2017,0.112,Above LOQ
+30B,Gadus morhua,CD,2018,0.1045,Above LOQ
+30B,Gadus morhua,CD,2019,0.081,Above LOQ
+30B,Gadus morhua,CD,2020,0.0725,Above LOQ
+30B,Gadus morhua,CD,2021,0.077,Above LOQ
+30B,Gadus morhua,CD,2022,0.049,Above LOQ
+31A,Mytilus edulis,CB118,1989,0.4,Above LOQ
+31A,Mytilus edulis,CB118,1990,1.1,Above LOQ
+31A,Mytilus edulis,CB118,1991,1,Above LOQ
+31A,Mytilus edulis,CB118,1992,1.6,Above LOQ
+31A,Mytilus edulis,CB118,1993,0.6,Above LOQ
+31A,Mytilus edulis,CB118,1994,2.18,Above LOQ
+31A,Mytilus edulis,CB118,1995,1.82,Above LOQ
+31A,Mytilus edulis,CB118,1996,3.02,Above LOQ
+31A,Mytilus edulis,CB118,1997,0.91,Above LOQ
+31A,Mytilus edulis,CB118,1998,0.33,Above LOQ
+31A,Mytilus edulis,CB118,1999,0.49,Above LOQ
+31A,Mytilus edulis,CB118,2000,0.18,Above LOQ
+31A,Mytilus edulis,CB118,2001,0.29,Above LOQ
+31A,Mytilus edulis,CB118,2002,0.28,Above LOQ
+31A,Mytilus edulis,CB118,2003,0.22,Above LOQ
+31A,Mytilus edulis,CB118,2004,0.11,Above LOQ
+31A,Mytilus edulis,CB118,2005,0.33,Above LOQ
+31A,Mytilus edulis,CB118,2006,0.37,Above LOQ
+31A,Mytilus edulis,CB118,2007,0.15,Above LOQ
+31A,Mytilus edulis,CB118,2008,0.31,Above LOQ
+31A,Mytilus edulis,CB118,2009,0.21,Above LOQ
+31A,Mytilus edulis,CB118,2010,3.1,Above LOQ
+31A,Mytilus edulis,CB118,2011,0.16,Above LOQ
+31A,Mytilus edulis,CB118,2012,0.18,Above LOQ
+31A,Mytilus edulis,CB118,2013,0.22,Above LOQ
+31A,Mytilus edulis,CB118,2014,0.16,Above LOQ
+31A,Mytilus edulis,CB118,2015,0.22,Above LOQ
+31A,Mytilus edulis,CB118,2016,0.08,Above LOQ
+31A,Mytilus edulis,CB118,2017,0.266,Above LOQ
+31A,Mytilus edulis,CB118,2018,0.216,Above LOQ
+31A,Mytilus edulis,CB118,2019,0.207,Above LOQ
+31A,Mytilus edulis,CB118,2020,0.287,Above LOQ
+31A,Mytilus edulis,CB118,2021,0.269,Above LOQ
+31A,Mytilus edulis,CB118,2022,0.119,Above LOQ
+31A,Mytilus edulis,CD,1981,0.25,Above LOQ
+31A,Mytilus edulis,CD,1983,0.23,Above LOQ
+31A,Mytilus edulis,CD,1984,0.18,Above LOQ
+31A,Mytilus edulis,CD,1985,0.2088,Above LOQ
+31A,Mytilus edulis,CD,1986,0.3678,Above LOQ
+31A,Mytilus edulis,CD,1987,0.0848,Above LOQ
+31A,Mytilus edulis,CD,1988,0.09468,Above LOQ
+31A,Mytilus edulis,CD,1989,0.11,Above LOQ
+31A,Mytilus edulis,CD,1990,0.12,Above LOQ
+31A,Mytilus edulis,CD,1991,0.12,Above LOQ
+31A,Mytilus edulis,CD,1992,0.18,Above LOQ
+31A,Mytilus edulis,CD,1993,0.21,Above LOQ
+31A,Mytilus edulis,CD,1994,0.171,Above LOQ
+31A,Mytilus edulis,CD,1995,0.2125,Above LOQ
+31A,Mytilus edulis,CD,1996,0.18,Above LOQ
+31A,Mytilus edulis,CD,1997,0.17,Above LOQ
+31A,Mytilus edulis,CD,1998,0.154,Above LOQ
+31A,Mytilus edulis,CD,1999,0.211,Above LOQ
+31A,Mytilus edulis,CD,2000,0.194,Above LOQ
+31A,Mytilus edulis,CD,2001,0.344,Above LOQ
+31A,Mytilus edulis,CD,2002,0.166,Above LOQ
+31A,Mytilus edulis,CD,2003,0.203,Above LOQ
+31A,Mytilus edulis,CD,2004,0.188,Above LOQ
+31A,Mytilus edulis,CD,2005,0.189,Above LOQ
+31A,Mytilus edulis,CD,2006,0.217,Above LOQ
+31A,Mytilus edulis,CD,2007,0.195,Above LOQ
+31A,Mytilus edulis,CD,2008,0.182,Above LOQ
+31A,Mytilus edulis,CD,2009,0.182,Above LOQ
+31A,Mytilus edulis,CD,2010,0.177,Above LOQ
+31A,Mytilus edulis,CD,2011,0.249,Above LOQ
+31A,Mytilus edulis,CD,2012,0.11,Above LOQ
+31A,Mytilus edulis,CD,2013,0.12,Above LOQ
+31A,Mytilus edulis,CD,2014,0.12,Above LOQ
+31A,Mytilus edulis,CD,2015,0.11,Above LOQ
+31A,Mytilus edulis,CD,2016,0.095,Above LOQ
+31A,Mytilus edulis,CD,2017,0.19,Above LOQ
+31A,Mytilus edulis,CD,2018,0.12,Above LOQ
+31A,Mytilus edulis,CD,2019,0.14,Above LOQ
+31A,Mytilus edulis,CD,2020,0.14,Above LOQ
+31A,Mytilus edulis,CD,2021,0.12,Above LOQ
+31A,Mytilus edulis,CD,2022,0.14,Above LOQ
+36B,Gadus morhua,CB118,1989,85,Below LOQ
+36B,Gadus morhua,CB118,1990,64,Above LOQ
+36B,Gadus morhua,CB118,1991,58.5,Above LOQ
+36B,Gadus morhua,CB118,1992,73.5,Above LOQ
+36B,Gadus morhua,CB118,1993,96.5,Above LOQ
+36B,Gadus morhua,CB118,1994,61,Above LOQ
+36B,Gadus morhua,CB118,1995,261,Above LOQ
+36B,Gadus morhua,CB118,1996,99,Above LOQ
+36B,Gadus morhua,CB118,1997,95,Above LOQ
+36B,Gadus morhua,CB118,1998,120,Above LOQ
+36B,Gadus morhua,CB118,1999,130,Above LOQ
+36B,Gadus morhua,CB118,2000,96,Above LOQ
+36B,Gadus morhua,CB118,2001,38.5,Above LOQ
+36B,Gadus morhua,CB118,2002,44,Above LOQ
+36B,Gadus morhua,CB118,2003,110,Above LOQ
+36B,Gadus morhua,CB118,2004,135,Above LOQ
+36B,Gadus morhua,CB118,2005,115,Above LOQ
+36B,Gadus morhua,CB118,2006,120,Above LOQ
+36B,Gadus morhua,CB118,2007,34.5,Above LOQ
+36B,Gadus morhua,CB118,2008,31.5,Above LOQ
+36B,Gadus morhua,CB118,2009,23,Above LOQ
+36B,Gadus morhua,CB118,2010,35.5,Above LOQ
+36B,Gadus morhua,CB118,2011,36.5,Above LOQ
+36B,Gadus morhua,CB118,2012,22,Above LOQ
+36B,Gadus morhua,CB118,2013,14.5,Above LOQ
+36B,Gadus morhua,CB118,2014,30,Above LOQ
+36B,Gadus morhua,CB118,2015,21,Above LOQ
+36B,Gadus morhua,CB118,2016,17,Above LOQ
+36B,Gadus morhua,CB118,2017,18.95,Above LOQ
+36B,Gadus morhua,CB118,2018,89.8,Above LOQ
+36B,Gadus morhua,CB118,2019,34,Above LOQ
+36B,Gadus morhua,CB118,2020,18.8,Above LOQ
+36B,Gadus morhua,CB118,2021,13.35,Above LOQ
+36B,Gadus morhua,CB118,2022,19.9,Above LOQ
+36B,Gadus morhua,CD,1981,0.0205,Below LOQ
+36B,Gadus morhua,CD,1982,0.06,Above LOQ
+36B,Gadus morhua,CD,1983,0.22,Above LOQ
+36B,Gadus morhua,CD,1984,0.07,Above LOQ
+36B,Gadus morhua,CD,1985,0.05,Above LOQ
+36B,Gadus morhua,CD,1986,0.137,Above LOQ
+36B,Gadus morhua,CD,1987,0.06108,Below LOQ
+36B,Gadus morhua,CD,1988,0.03144,Below LOQ
+36B,Gadus morhua,CD,1989,0.02803,Below LOQ
+36B,Gadus morhua,CD,1990,0.0235,Above LOQ
+36B,Gadus morhua,CD,1991,0.01,Below LOQ
+36B,Gadus morhua,CD,1992,0.021,Above LOQ
+36B,Gadus morhua,CD,1993,0.034,Above LOQ
+36B,Gadus morhua,CD,1994,0.021,Above LOQ
+36B,Gadus morhua,CD,1995,0.042,Above LOQ
+36B,Gadus morhua,CD,1996,0.033,Above LOQ
+36B,Gadus morhua,CD,1997,0.082,Above LOQ
+36B,Gadus morhua,CD,1998,0.036,Above LOQ
+36B,Gadus morhua,CD,1999,0.065,Above LOQ
+36B,Gadus morhua,CD,2000,0.041,Above LOQ
+36B,Gadus morhua,CD,2001,0.029,Above LOQ
+36B,Gadus morhua,CD,2002,0.0247,Above LOQ
+36B,Gadus morhua,CD,2003,0.0088,Above LOQ
+36B,Gadus morhua,CD,2004,0.0067,Above LOQ
+36B,Gadus morhua,CD,2005,0.029,Above LOQ
+36B,Gadus morhua,CD,2006,0.025,Above LOQ
+36B,Gadus morhua,CD,2007,0.034,Above LOQ
+36B,Gadus morhua,CD,2008,0.034,Above LOQ
+36B,Gadus morhua,CD,2009,0.025,Above LOQ
+36B,Gadus morhua,CD,2010,0.035,Above LOQ
+36B,Gadus morhua,CD,2011,0.02,Above LOQ
+36B,Gadus morhua,CD,2012,0.0445,Above LOQ
+36B,Gadus morhua,CD,2013,0.024,Above LOQ
+36B,Gadus morhua,CD,2014,0.036,Above LOQ
+36B,Gadus morhua,CD,2015,0.045,Above LOQ
+36B,Gadus morhua,CD,2016,0.032,Above LOQ
+36B,Gadus morhua,CD,2017,0.0195,Above LOQ
+36B,Gadus morhua,CD,2018,0.043,Above LOQ
+36B,Gadus morhua,CD,2019,0.035,Above LOQ
+36B,Gadus morhua,CD,2020,0.049,Above LOQ
+36B,Gadus morhua,CD,2021,0.0485,Above LOQ
+36B,Gadus morhua,CD,2022,0.018,Above LOQ
+53B,Gadus morhua,CB118,1989,360,Above LOQ
+53B,Gadus morhua,CB118,1990,45.5,Above LOQ
+53B,Gadus morhua,CB118,1991,45,Above LOQ
+53B,Gadus morhua,CB118,1992,178,Above LOQ
+53B,Gadus morhua,CB118,1993,17,Above LOQ
+53B,Gadus morhua,CB118,1994,20.5,Above LOQ
+53B,Gadus morhua,CB118,1995,16,Above LOQ
+53B,Gadus morhua,CB118,1996,113.3,Above LOQ
+53B,Gadus morhua,CB118,1997,48,Above LOQ
+53B,Gadus morhua,CB118,1998,438,Above LOQ
+53B,Gadus morhua,CB118,1999,49,Above LOQ
+53B,Gadus morhua,CB118,2000,150,Above LOQ
+53B,Gadus morhua,CB118,2001,110,Above LOQ
+53B,Gadus morhua,CB118,2002,105,Above LOQ
+53B,Gadus morhua,CB118,2003,32,Above LOQ
+53B,Gadus morhua,CB118,2004,65.5,Above LOQ
+53B,Gadus morhua,CB118,2005,14,Above LOQ
+53B,Gadus morhua,CB118,2006,36.5,Above LOQ
+53B,Gadus morhua,CB118,2007,100,Above LOQ
+53B,Gadus morhua,CB118,2008,14.5,Above LOQ
+53B,Gadus morhua,CB118,2009,47,Above LOQ
+53B,Gadus morhua,CB118,2010,74.5,Above LOQ
+53B,Gadus morhua,CB118,2011,55.5,Above LOQ
+53B,Gadus morhua,CB118,2012,24,Above LOQ
+53B,Gadus morhua,CB118,2013,132.5,Above LOQ
+53B,Gadus morhua,CB118,2014,190,Above LOQ
+53B,Gadus morhua,CB118,2015,46,Above LOQ
+53B,Gadus morhua,CB118,2016,56,Above LOQ
+53B,Gadus morhua,CB118,2017,230,Above LOQ
+53B,Gadus morhua,CB118,2018,44.3,Above LOQ
+53B,Gadus morhua,CB118,2019,78,Above LOQ
+53B,Gadus morhua,CB118,2020,26.9,Above LOQ
+53B,Gadus morhua,CB118,2021,17.3,Above LOQ
+53B,Gadus morhua,CB118,2022,10.2,Above LOQ
+53B,Gadus morhua,CD,1987,0.695,Above LOQ
+53B,Gadus morhua,CD,1988,0.058,Above LOQ
+53B,Gadus morhua,CD,1989,0.1024,Above LOQ
+53B,Gadus morhua,CD,1990,0.045,Below LOQ
+53B,Gadus morhua,CD,1991,0.149,Above LOQ
+53B,Gadus morhua,CD,1992,0.215,Above LOQ
+53B,Gadus morhua,CD,1993,0.038,Below LOQ
+53B,Gadus morhua,CD,1994,0.01,Below LOQ
+53B,Gadus morhua,CD,1995,0.007,Above LOQ
+53B,Gadus morhua,CD,1996,0.2628,Above LOQ
+53B,Gadus morhua,CD,1997,0.371,Above LOQ
+53B,Gadus morhua,CD,1998,0.2565,Above LOQ
+53B,Gadus morhua,CD,1999,0.733,Above LOQ
+53B,Gadus morhua,CD,2000,0.829,Above LOQ
+53B,Gadus morhua,CD,2001,0.565,Above LOQ
+53B,Gadus morhua,CD,2002,0.4315,Above LOQ
+53B,Gadus morhua,CD,2003,0.253,Above LOQ
+53B,Gadus morhua,CD,2004,0.368,Above LOQ
+53B,Gadus morhua,CD,2005,0.414,Above LOQ
+53B,Gadus morhua,CD,2006,0.2,Above LOQ
+53B,Gadus morhua,CD,2007,0.2795,Above LOQ
+53B,Gadus morhua,CD,2008,0.494,Above LOQ
+53B,Gadus morhua,CD,2009,0.2,Above LOQ
+53B,Gadus morhua,CD,2010,0.156,Above LOQ
+53B,Gadus morhua,CD,2011,0.0645,Above LOQ
+53B,Gadus morhua,CD,2012,0.097,Above LOQ
+53B,Gadus morhua,CD,2015,0.115,Above LOQ
+53B,Gadus morhua,CD,2016,0.052,Above LOQ
+53B,Gadus morhua,CD,2017,0.072,Above LOQ
+53B,Gadus morhua,CD,2018,0.042,Above LOQ
+53B,Gadus morhua,CD,2019,0.028,Above LOQ
+53B,Gadus morhua,CD,2020,0.028,Above LOQ
+53B,Gadus morhua,CD,2021,0.029,Above LOQ
+53B,Gadus morhua,CD,2022,0.033,Above LOQ
+56A,Mytilus edulis,CB118,1989,0.9,Above LOQ
+56A,Mytilus edulis,CB118,1990,0.5,Above LOQ
+56A,Mytilus edulis,CB118,1991,0.4,Below LOQ
+56A,Mytilus edulis,CB118,1992,0.2,Above LOQ
+56A,Mytilus edulis,CB118,1993,0.1,Above LOQ
+56A,Mytilus edulis,CB118,1994,0.3,Above LOQ
+56A,Mytilus edulis,CB118,1995,0.16,Above LOQ
+56A,Mytilus edulis,CB118,1996,0.23,Above LOQ
+56A,Mytilus edulis,CB118,1997,0.4,Above LOQ
+56A,Mytilus edulis,CB118,1998,0.3,Above LOQ
+56A,Mytilus edulis,CB118,1999,0.27,Above LOQ
+56A,Mytilus edulis,CB118,2000,0.13,Above LOQ
+56A,Mytilus edulis,CB118,2001,7.4,Above LOQ
+56A,Mytilus edulis,CB118,2002,0.6667,Above LOQ
+56A,Mytilus edulis,CB118,2003,0.29,Below LOQ
+56A,Mytilus edulis,CB118,2004,0.23,Above LOQ
+56A,Mytilus edulis,CB118,2005,0.25,Above LOQ
+56A,Mytilus edulis,CB118,2006,0.19,Above LOQ
+56A,Mytilus edulis,CB118,2007,0.27,Above LOQ
+56A,Mytilus edulis,CB118,2008,0.21,Above LOQ
+56A,Mytilus edulis,CB118,2009,0.19,Above LOQ
+56A,Mytilus edulis,CB118,2010,0.1,Below LOQ
+56A,Mytilus edulis,CB118,2011,0.09,Above LOQ
+56A,Mytilus edulis,CB118,2012,0.076,Above LOQ
+56A,Mytilus edulis,CB118,2013,0.1,Above LOQ
+56A,Mytilus edulis,CB118,2014,0.071,Above LOQ
+56A,Mytilus edulis,CB118,2015,0.14,Above LOQ
+56A,Mytilus edulis,CB118,2016,0.11,Above LOQ
+56A,Mytilus edulis,CB118,2017,0.093,Above LOQ
+56A,Mytilus edulis,CB118,2018,0.0958,Above LOQ
+56A,Mytilus edulis,CB118,2019,0.0365,Below LOQ
+56A,Mytilus edulis,CB118,2020,0.114,Above LOQ
+56A,Mytilus edulis,CB118,2021,0.181,Above LOQ
+56A,Mytilus edulis,CB118,2022,0.108,Above LOQ
+56A,Mytilus edulis,CD,1987,8.491,Above LOQ
+56A,Mytilus edulis,CD,1988,8.24,Above LOQ
+56A,Mytilus edulis,CD,1989,12.7,Above LOQ
+56A,Mytilus edulis,CD,1990,6.71,Above LOQ
+56A,Mytilus edulis,CD,1991,8.75,Above LOQ
+56A,Mytilus edulis,CD,1992,5.58,Above LOQ
+56A,Mytilus edulis,CD,1993,5.61,Above LOQ
+56A,Mytilus edulis,CD,1994,1.783,Above LOQ
+56A,Mytilus edulis,CD,1995,3.901,Above LOQ
+56A,Mytilus edulis,CD,1996,3.18,Above LOQ
+56A,Mytilus edulis,CD,1997,3.34,Above LOQ
+56A,Mytilus edulis,CD,1998,1.66,Above LOQ
+56A,Mytilus edulis,CD,1999,3.485,Above LOQ
+56A,Mytilus edulis,CD,2000,4.24,Above LOQ
+56A,Mytilus edulis,CD,2001,2.16,Above LOQ
+56A,Mytilus edulis,CD,2002,2.23,Above LOQ
+56A,Mytilus edulis,CD,2003,1.51,Above LOQ
+56A,Mytilus edulis,CD,2004,0.946,Above LOQ
+56A,Mytilus edulis,CD,2005,1.44,Above LOQ
+56A,Mytilus edulis,CD,2006,1.26,Above LOQ
+56A,Mytilus edulis,CD,2007,0.933,Above LOQ
+56A,Mytilus edulis,CD,2008,0.885,Above LOQ
+56A,Mytilus edulis,CD,2009,0.734,Above LOQ
+56A,Mytilus edulis,CD,2010,0.791,Above LOQ
+56A,Mytilus edulis,CD,2011,0.982,Above LOQ
+56A,Mytilus edulis,CD,2021,0.35,Above LOQ
+56A,Mytilus edulis,CD,2022,0.41,Above LOQ
+65A,Mytilus edulis,CB118,1989,0.2,Above LOQ
+65A,Mytilus edulis,CB118,1990,0.74,Above LOQ
+65A,Mytilus edulis,CB118,1991,0.2,Below LOQ
+65A,Mytilus edulis,CB118,1992,0.1,Above LOQ
+65A,Mytilus edulis,CB118,1993,0.1,Below LOQ
+65A,Mytilus edulis,CB118,1994,0.13,Above LOQ
+65A,Mytilus edulis,CB118,1995,0.08,Above LOQ
+65A,Mytilus edulis,CB118,1996,0.12,Above LOQ
+65A,Mytilus edulis,CB118,1997,0.07,Above LOQ
+65A,Mytilus edulis,CB118,1998,0.24,Above LOQ
+65A,Mytilus edulis,CB118,1999,0.125,Above LOQ
+65A,Mytilus edulis,CB118,2000,0.08,Above LOQ
+65A,Mytilus edulis,CB118,2001,0.27,Above LOQ
+65A,Mytilus edulis,CB118,2002,0.1,Below LOQ
+65A,Mytilus edulis,CB118,2003,0.1,Below LOQ
+65A,Mytilus edulis,CB118,2004,0.08,Above LOQ
+65A,Mytilus edulis,CB118,2005,0.2,Above LOQ
+65A,Mytilus edulis,CB118,2006,0.09,Above LOQ
+65A,Mytilus edulis,CB118,2007,0.15,Above LOQ
+65A,Mytilus edulis,CB118,2008,0.12,Above LOQ
+65A,Mytilus edulis,CB118,2009,0.13,Above LOQ
+65A,Mytilus edulis,CB118,2010,0.1,Below LOQ
+65A,Mytilus edulis,CB118,2011,0.09,Above LOQ
+65A,Mytilus edulis,CB118,2012,0.05,Below LOQ
+65A,Mytilus edulis,CB118,2013,0.05,Below LOQ
+65A,Mytilus edulis,CB118,2014,0.05,Below LOQ
+65A,Mytilus edulis,CB118,2015,0.089,Above LOQ
+65A,Mytilus edulis,CB118,2016,0.05,Below LOQ
+65A,Mytilus edulis,CB118,2017,0.0457,Below LOQ
+65A,Mytilus edulis,CB118,2018,0.0858,Above LOQ
+65A,Mytilus edulis,CB118,2019,0.0661,Above LOQ
+65A,Mytilus edulis,CB118,2020,0.0653,Above LOQ
+65A,Mytilus edulis,CB118,2021,0.0953,Above LOQ
+65A,Mytilus edulis,CB118,2022,0.0519,Above LOQ
+65A,Mytilus edulis,CD,1987,2.685,Above LOQ
+65A,Mytilus edulis,CD,1988,1.166,Above LOQ
+65A,Mytilus edulis,CD,1989,2.05,Above LOQ
+65A,Mytilus edulis,CD,1990,2.03,Above LOQ
+65A,Mytilus edulis,CD,1991,2.66,Above LOQ
+65A,Mytilus edulis,CD,1992,0.87,Above LOQ
+65A,Mytilus edulis,CD,1993,1.16,Above LOQ
+65A,Mytilus edulis,CD,1994,0.532,Above LOQ
+65A,Mytilus edulis,CD,1995,0.907,Above LOQ
+65A,Mytilus edulis,CD,1996,0.6,Above LOQ
+65A,Mytilus edulis,CD,1997,0.642,Above LOQ
+65A,Mytilus edulis,CD,1998,0.345,Above LOQ
+65A,Mytilus edulis,CD,1999,0.6735,Above LOQ
+65A,Mytilus edulis,CD,2000,0.746,Above LOQ
+65A,Mytilus edulis,CD,2001,0.76,Above LOQ
+65A,Mytilus edulis,CD,2002,0.766,Above LOQ
+65A,Mytilus edulis,CD,2003,0.578,Above LOQ
+65A,Mytilus edulis,CD,2004,0.512,Above LOQ
+65A,Mytilus edulis,CD,2005,0.616,Above LOQ
+65A,Mytilus edulis,CD,2006,0.636,Above LOQ
+65A,Mytilus edulis,CD,2007,0.392,Above LOQ
+65A,Mytilus edulis,CD,2008,0.293,Above LOQ
+65A,Mytilus edulis,CD,2009,0.286,Above LOQ
+65A,Mytilus edulis,CD,2010,0.328,Above LOQ
+65A,Mytilus edulis,CD,2011,0.209,Above LOQ
+65A,Mytilus edulis,CD,2012,0.18,Above LOQ
+65A,Mytilus edulis,CD,2013,0.17,Above LOQ
+65A,Mytilus edulis,CD,2014,0.18,Above LOQ
+65A,Mytilus edulis,CD,2015,0.17,Above LOQ
+65A,Mytilus edulis,CD,2016,0.08,Above LOQ
+65A,Mytilus edulis,CD,2017,0.14,Above LOQ
+65A,Mytilus edulis,CD,2018,0.15,Above LOQ
+65A,Mytilus edulis,CD,2019,0.15,Above LOQ
+65A,Mytilus edulis,CD,2020,0.16,Above LOQ
+65A,Mytilus edulis,CD,2021,0.17,Above LOQ
+65A,Mytilus edulis,CD,2022,0.17,Above LOQ
+71A,Mytilus edulis,CB118,1989,0.6,Above LOQ
+71A,Mytilus edulis,CB118,1990,0.62,Above LOQ
+71A,Mytilus edulis,CB118,1991,0.9,Above LOQ
+71A,Mytilus edulis,CB118,1992,0.4,Above LOQ
+71A,Mytilus edulis,CB118,1993,0.3,Above LOQ
+71A,Mytilus edulis,CB118,1994,0.43,Above LOQ
+71A,Mytilus edulis,CB118,1995,0.21,Above LOQ
+71A,Mytilus edulis,CB118,1996,0.6,Above LOQ
+71A,Mytilus edulis,CB118,1997,0.17,Above LOQ
+71A,Mytilus edulis,CB118,1998,0.35,Above LOQ
+71A,Mytilus edulis,CB118,1999,0.35,Above LOQ
+71A,Mytilus edulis,CB118,2000,0.22,Above LOQ
+71A,Mytilus edulis,CB118,2001,0.35,Above LOQ
+71A,Mytilus edulis,CB118,2002,0.2,Above LOQ
+71A,Mytilus edulis,CB118,2003,0.25,Above LOQ
+71A,Mytilus edulis,CB118,2004,0.11,Above LOQ
+71A,Mytilus edulis,CB118,2005,0.33,Above LOQ
+71A,Mytilus edulis,CB118,2006,0.31,Above LOQ
+71A,Mytilus edulis,CB118,2007,0.23,Above LOQ
+71A,Mytilus edulis,CB118,2008,0.36,Above LOQ
+71A,Mytilus edulis,CB118,2009,0.38,Above LOQ
+71A,Mytilus edulis,CB118,2010,0.17,Above LOQ
+71A,Mytilus edulis,CB118,2011,0.28,Above LOQ
+71A,Mytilus edulis,CB118,2013,0.11,Above LOQ
+71A,Mytilus edulis,CB118,2015,0.12,Above LOQ
+71A,Mytilus edulis,CB118,2016,0.13,Above LOQ
+71A,Mytilus edulis,CB118,2021,0.208,Above LOQ
+71A,Mytilus edulis,CB118,2022,0.1845,Above LOQ
+71A,Mytilus edulis,CD,1981,1.2,Above LOQ
+71A,Mytilus edulis,CD,1982,0.27,Above LOQ
+71A,Mytilus edulis,CD,1983,0.32,Above LOQ
+71A,Mytilus edulis,CD,1984,0.32,Above LOQ
+71A,Mytilus edulis,CD,1985,0.3183,Above LOQ
+71A,Mytilus edulis,CD,1986,0.379,Above LOQ
+71A,Mytilus edulis,CD,1987,0.1764,Above LOQ
+71A,Mytilus edulis,CD,1988,0.2279,Above LOQ
+71A,Mytilus edulis,CD,1989,0.38,Above LOQ
+71A,Mytilus edulis,CD,1990,0.15,Above LOQ
+71A,Mytilus edulis,CD,1991,0.21,Above LOQ
+71A,Mytilus edulis,CD,1992,0.28,Above LOQ
+71A,Mytilus edulis,CD,1993,0.35,Above LOQ
+71A,Mytilus edulis,CD,1994,0.304,Above LOQ
+71A,Mytilus edulis,CD,1995,0.347,Above LOQ
+71A,Mytilus edulis,CD,1996,0.25,Above LOQ
+71A,Mytilus edulis,CD,1997,0.266,Above LOQ
+71A,Mytilus edulis,CD,1998,0.265,Above LOQ
+71A,Mytilus edulis,CD,1999,0.273,Above LOQ
+71A,Mytilus edulis,CD,2000,0.306,Above LOQ
+71A,Mytilus edulis,CD,2001,0.219,Above LOQ
+71A,Mytilus edulis,CD,2002,0.289,Above LOQ
+71A,Mytilus edulis,CD,2003,0.221,Above LOQ
+71A,Mytilus edulis,CD,2004,0.2,Above LOQ
+71A,Mytilus edulis,CD,2005,0.219,Above LOQ
+71A,Mytilus edulis,CD,2006,0.237,Above LOQ
+71A,Mytilus edulis,CD,2007,0.1865,Above LOQ
+71A,Mytilus edulis,CD,2008,0.204,Above LOQ
+71A,Mytilus edulis,CD,2009,0.194,Above LOQ
+71A,Mytilus edulis,CD,2010,0.32,Above LOQ
+71A,Mytilus edulis,CD,2011,0.354,Above LOQ
+71A,Mytilus edulis,CD,2012,0.39,Above LOQ
+71A,Mytilus edulis,CD,2013,0.25,Above LOQ
+71A,Mytilus edulis,CD,2014,0.28,Above LOQ
+71A,Mytilus edulis,CD,2015,0.18,Above LOQ
+71A,Mytilus edulis,CD,2016,0.18,Above LOQ
+71A,Mytilus edulis,CD,2017,0.21,Above LOQ
+71A,Mytilus edulis,CD,2020,0.19,Above LOQ
+71A,Mytilus edulis,CD,2021,0.15,Above LOQ
+71A,Mytilus edulis,CD,2022,0.13,Above LOQ
+98A2,Mytilus edulis,CB118,1997,0.37,Above LOQ
+98A2,Mytilus edulis,CB118,1999,0.1,Below LOQ
+98A2,Mytilus edulis,CB118,2000,0.1,Below LOQ
+98A2,Mytilus edulis,CB118,2001,0.15,Below LOQ
+98A2,Mytilus edulis,CB118,2002,0.1,Below LOQ
+98A2,Mytilus edulis,CB118,2003,0.1,Below LOQ
+98A2,Mytilus edulis,CB118,2004,0.06,Above LOQ
+98A2,Mytilus edulis,CB118,2005,0.08,Above LOQ
+98A2,Mytilus edulis,CB118,2006,0.1,Above LOQ
+98A2,Mytilus edulis,CB118,2007,0.06,Above LOQ
+98A2,Mytilus edulis,CB118,2008,0.05,Below LOQ
+98A2,Mytilus edulis,CB118,2009,0.1,Above LOQ
+98A2,Mytilus edulis,CB118,2010,0.1,Below LOQ
+98A2,Mytilus edulis,CB118,2011,0.06,Above LOQ
+98A2,Mytilus edulis,CB118,2012,0.05,Below LOQ
+98A2,Mytilus edulis,CB118,2013,0.05,Below LOQ
+98A2,Mytilus edulis,CB118,2014,0.059,Above LOQ
+98A2,Mytilus edulis,CB118,2015,0.052,Above LOQ
+98A2,Mytilus edulis,CB118,2016,0.05,Below LOQ
+98A2,Mytilus edulis,CB118,2017,0.0572,Above LOQ
+98A2,Mytilus edulis,CB118,2018,0.0513,Above LOQ
+98A2,Mytilus edulis,CB118,2019,0.0383,Above LOQ
+98A2,Mytilus edulis,CB118,2020,0.0383,Above LOQ
+98A2,Mytilus edulis,CB118,2021,0.0442,Above LOQ
+98A2,Mytilus edulis,CB118,2022,0.0587,Above LOQ
+98A2,Mytilus edulis,CD,1997,0.129,Above LOQ
+98A2,Mytilus edulis,CD,1999,0.291,Above LOQ
+98A2,Mytilus edulis,CD,2000,0.292,Above LOQ
+98A2,Mytilus edulis,CD,2001,0.417,Above LOQ
+98A2,Mytilus edulis,CD,2002,0.341,Above LOQ
+98A2,Mytilus edulis,CD,2003,0.309,Above LOQ
+98A2,Mytilus edulis,CD,2004,0.208,Above LOQ
+98A2,Mytilus edulis,CD,2005,0.22,Above LOQ
+98A2,Mytilus edulis,CD,2006,0.212,Above LOQ
+98A2,Mytilus edulis,CD,2007,0.162,Above LOQ
+98A2,Mytilus edulis,CD,2008,0.242,Above LOQ
+98A2,Mytilus edulis,CD,2009,0.233,Above LOQ
+98A2,Mytilus edulis,CD,2010,0.257,Above LOQ
+98A2,Mytilus edulis,CD,2011,0.292,Above LOQ
+98A2,Mytilus edulis,CD,2012,0.19,Above LOQ
+98A2,Mytilus edulis,CD,2013,0.2,Above LOQ
+98A2,Mytilus edulis,CD,2014,0.22,Above LOQ
+98A2,Mytilus edulis,CD,2015,0.2,Above LOQ
+98A2,Mytilus edulis,CD,2016,0.16,Above LOQ
+98A2,Mytilus edulis,CD,2017,0.23,Above LOQ
+98A2,Mytilus edulis,CD,2018,0.21,Above LOQ
+98A2,Mytilus edulis,CD,2019,0.22,Above LOQ
+98A2,Mytilus edulis,CD,2020,0.19,Above LOQ
+98A2,Mytilus edulis,CD,2021,0.25,Above LOQ
+98A2,Mytilus edulis,CD,2022,0.18,Above LOQ
+98B1,Gadus morhua,CB118,1992,32.5,Above LOQ
+98B1,Gadus morhua,CB118,1993,21,Above LOQ
+98B1,Gadus morhua,CB118,1994,17.5,Below LOQ
+98B1,Gadus morhua,CB118,1995,34,Above LOQ
+98B1,Gadus morhua,CB118,1996,44,Above LOQ
+98B1,Gadus morhua,CB118,1997,53,Above LOQ
+98B1,Gadus morhua,CB118,1998,24,Below LOQ
+98B1,Gadus morhua,CB118,1999,17.5,Above LOQ
+98B1,Gadus morhua,CB118,2002,7.45,Below LOQ
+98B1,Gadus morhua,CB118,2003,15,Below LOQ
+98B1,Gadus morhua,CB118,2004,19,Below LOQ
+98B1,Gadus morhua,CB118,2005,9.95,Below LOQ
+98B1,Gadus morhua,CB118,2006,15,Below LOQ
+98B1,Gadus morhua,CB118,2007,17.5,Above LOQ
+98B1,Gadus morhua,CB118,2008,6.85,Below LOQ
+98B1,Gadus morhua,CB118,2009,2,Below LOQ
+98B1,Gadus morhua,CB118,2010,5.95,Below LOQ
+98B1,Gadus morhua,CB118,2011,6.65,Below LOQ
+98B1,Gadus morhua,CB118,2012,6.4,Above LOQ
+98B1,Gadus morhua,CB118,2013,4.9,Above LOQ
+98B1,Gadus morhua,CB118,2014,4.2,Above LOQ
+98B1,Gadus morhua,CB118,2015,30,Above LOQ
+98B1,Gadus morhua,CB118,2016,14,Above LOQ
+98B1,Gadus morhua,CB118,2017,10.6,Above LOQ
+98B1,Gadus morhua,CB118,2018,15.55,Above LOQ
+98B1,Gadus morhua,CB118,2019,22.1,Above LOQ
+98B1,Gadus morhua,CB118,2020,22.5,Above LOQ
+98B1,Gadus morhua,CB118,2021,24.1,Above LOQ
+98B1,Gadus morhua,CB118,2022,15.9,Above LOQ
+98B1,Gadus morhua,CD,1992,0.069,Above LOQ
+98B1,Gadus morhua,CD,1993,0.15,Above LOQ
+98B1,Gadus morhua,CD,1994,0.025,Above LOQ
+98B1,Gadus morhua,CD,1995,0.113,Above LOQ
+98B1,Gadus morhua,CD,1996,0.33,Above LOQ
+98B1,Gadus morhua,CD,1997,0.064,Above LOQ
+98B1,Gadus morhua,CD,1998,0.047,Above LOQ
+98B1,Gadus morhua,CD,1999,0.039,Above LOQ
+98B1,Gadus morhua,CD,2002,0.0291,Above LOQ
+98B1,Gadus morhua,CD,2003,0.0254,Above LOQ
+98B1,Gadus morhua,CD,2004,0.03325,Above LOQ
+98B1,Gadus morhua,CD,2005,0.051,Above LOQ
+98B1,Gadus morhua,CD,2006,0.0379,Above LOQ
+98B1,Gadus morhua,CD,2007,0.069,Above LOQ
+98B1,Gadus morhua,CD,2008,0.024,Above LOQ
+98B1,Gadus morhua,CD,2009,0.018,Above LOQ
+98B1,Gadus morhua,CD,2010,0.053,Above LOQ
+98B1,Gadus morhua,CD,2011,0.11,Above LOQ
+98B1,Gadus morhua,CD,2012,0.13,Above LOQ
+98B1,Gadus morhua,CD,2013,0.105,Above LOQ
+98B1,Gadus morhua,CD,2014,0.12,Above LOQ
+98B1,Gadus morhua,CD,2015,0.044,Above LOQ
+98B1,Gadus morhua,CD,2016,0.035,Above LOQ
+98B1,Gadus morhua,CD,2017,0.12,Above LOQ
+98B1,Gadus morhua,CD,2018,0.0415,Above LOQ
+98B1,Gadus morhua,CD,2019,0.041,Above LOQ
+98B1,Gadus morhua,CD,2020,0.056,Above LOQ
+98B1,Gadus morhua,CD,2021,0.058,Above LOQ
+98B1,Gadus morhua,CD,2022,0.038,Above LOQ
+I023,Mytilus edulis,CB118,1995,0.47,Above LOQ
+I023,Mytilus edulis,CB118,1996,0.42,Above LOQ
+I023,Mytilus edulis,CB118,1997,0.52,Above LOQ
+I023,Mytilus edulis,CB118,1998,0.24,Above LOQ
+I023,Mytilus edulis,CB118,1999,0.36,Above LOQ
+I023,Mytilus edulis,CB118,2000,0.26,Above LOQ
+I023,Mytilus edulis,CB118,2001,0.3,Above LOQ
+I023,Mytilus edulis,CB118,2002,0.22,Above LOQ
+I023,Mytilus edulis,CB118,2003,0.24,Above LOQ
+I023,Mytilus edulis,CB118,2004,0.14,Above LOQ
+I023,Mytilus edulis,CB118,2005,0.15,Above LOQ
+I023,Mytilus edulis,CB118,2006,0.16,Above LOQ
+I023,Mytilus edulis,CB118,2007,0.12,Above LOQ
+I023,Mytilus edulis,CB118,2008,0.11,Above LOQ
+I023,Mytilus edulis,CB118,2009,0.23,Above LOQ
+I023,Mytilus edulis,CB118,2010,0.18,Above LOQ
+I023,Mytilus edulis,CB118,2011,0.14,Above LOQ
+I023,Mytilus edulis,CB118,2012,0.11,Above LOQ
+I023,Mytilus edulis,CB118,2013,0.069,Above LOQ
+I023,Mytilus edulis,CB118,2014,0.056,Above LOQ
+I023,Mytilus edulis,CB118,2015,0.13,Above LOQ
+I023,Mytilus edulis,CB118,2016,0.12,Above LOQ
+I023,Mytilus edulis,CB118,2017,0.0805,Above LOQ
+I023,Mytilus edulis,CB118,2018,0.154,Above LOQ
+I023,Mytilus edulis,CB118,2019,0.152,Above LOQ
+I023,Mytilus edulis,CB118,2020,0.131,Above LOQ
+I023,Mytilus edulis,CB118,2021,0.144,Above LOQ
+I023,Mytilus edulis,CB118,2022,0.0638,Above LOQ
+I023,Mytilus edulis,CD,1995,0.245,Above LOQ
+I023,Mytilus edulis,CD,1996,0.167,Above LOQ
+I023,Mytilus edulis,CD,1997,0.22,Above LOQ
+I023,Mytilus edulis,CD,1998,0.229,Above LOQ
+I023,Mytilus edulis,CD,1999,0.179,Above LOQ
+I023,Mytilus edulis,CD,2000,0.164,Above LOQ
+I023,Mytilus edulis,CD,2001,0.124,Above LOQ
+I023,Mytilus edulis,CD,2002,0.186,Above LOQ
+I023,Mytilus edulis,CD,2003,0.188,Above LOQ
+I023,Mytilus edulis,CD,2004,0.126,Above LOQ
+I023,Mytilus edulis,CD,2005,0.179,Above LOQ
+I023,Mytilus edulis,CD,2006,0.233,Above LOQ
+I023,Mytilus edulis,CD,2007,0.15,Above LOQ
+I023,Mytilus edulis,CD,2008,0.167,Above LOQ
+I023,Mytilus edulis,CD,2009,0.137,Above LOQ
+I023,Mytilus edulis,CD,2010,0.275,Above LOQ
+I023,Mytilus edulis,CD,2011,0.177,Above LOQ
+I023,Mytilus edulis,CD,2012,0.37,Above LOQ
+I023,Mytilus edulis,CD,2013,0.19,Above LOQ
+I023,Mytilus edulis,CD,2014,0.21,Above LOQ
+I023,Mytilus edulis,CD,2015,0.19,Above LOQ
+I023,Mytilus edulis,CD,2016,0.15,Above LOQ
+I023,Mytilus edulis,CD,2017,0.2,Above LOQ
+I023,Mytilus edulis,CD,2018,0.19,Above LOQ
+I023,Mytilus edulis,CD,2019,0.13,Above LOQ
+I023,Mytilus edulis,CD,2020,0.15,Above LOQ
+I023,Mytilus edulis,CD,2021,0.13,Above LOQ
+I023,Mytilus edulis,CD,2022,0.14,Above LOQ
+I024,Mytilus edulis,CB118,1995,0.95,Above LOQ
+I024,Mytilus edulis,CB118,1996,0.78,Above LOQ
+I024,Mytilus edulis,CB118,1997,0.78,Above LOQ
+I024,Mytilus edulis,CB118,1998,0.65,Above LOQ
+I024,Mytilus edulis,CB118,1999,0.41,Above LOQ
+I024,Mytilus edulis,CB118,2000,0.33,Above LOQ
+I024,Mytilus edulis,CB118,2001,0.24,Above LOQ
+I024,Mytilus edulis,CB118,2002,0.33,Above LOQ
+I024,Mytilus edulis,CB118,2003,0.29,Above LOQ
+I024,Mytilus edulis,CB118,2004,0.21,Above LOQ
+I024,Mytilus edulis,CB118,2005,0.17,Above LOQ
+I024,Mytilus edulis,CB118,2006,0.24,Above LOQ
+I024,Mytilus edulis,CB118,2007,0.1,Above LOQ
+I024,Mytilus edulis,CB118,2008,0.13,Above LOQ
+I024,Mytilus edulis,CB118,2009,0.16,Above LOQ
+I024,Mytilus edulis,CB118,2010,0.12,Above LOQ
+I024,Mytilus edulis,CB118,2014,0.18,Above LOQ
+I024,Mytilus edulis,CB118,2015,0.14,Above LOQ
+I024,Mytilus edulis,CB118,2016,0.11,Above LOQ
+I024,Mytilus edulis,CB118,2017,0.169,Above LOQ
+I024,Mytilus edulis,CB118,2018,0.202,Above LOQ
+I024,Mytilus edulis,CB118,2019,0.1205,Above LOQ
+I024,Mytilus edulis,CB118,2020,0.263,Above LOQ
+I024,Mytilus edulis,CB118,2021,0.141,Above LOQ
+I024,Mytilus edulis,CB118,2022,0.117,Above LOQ
+I024,Mytilus edulis,CD,1995,0.265,Above LOQ
+I024,Mytilus edulis,CD,1996,0.225,Above LOQ
+I024,Mytilus edulis,CD,1997,0.228,Above LOQ
+I024,Mytilus edulis,CD,1998,0.297,Above LOQ
+I024,Mytilus edulis,CD,1999,0.26,Above LOQ
+I024,Mytilus edulis,CD,2000,0.304,Above LOQ
+I024,Mytilus edulis,CD,2001,0.286,Above LOQ
+I024,Mytilus edulis,CD,2002,0.273,Above LOQ
+I024,Mytilus edulis,CD,2003,0.262,Above LOQ
+I024,Mytilus edulis,CD,2004,0.1605,Above LOQ
+I024,Mytilus edulis,CD,2005,0.15,Above LOQ
+I024,Mytilus edulis,CD,2006,0.241,Above LOQ
+I024,Mytilus edulis,CD,2007,0.169,Above LOQ
+I024,Mytilus edulis,CD,2008,0.224,Above LOQ
+I024,Mytilus edulis,CD,2009,0.21,Above LOQ
+I024,Mytilus edulis,CD,2010,0.209,Above LOQ
+I024,Mytilus edulis,CD,2013,0.32,Above LOQ
+I024,Mytilus edulis,CD,2014,0.25,Above LOQ
+I024,Mytilus edulis,CD,2015,0.25,Above LOQ
+I024,Mytilus edulis,CD,2016,0.18,Above LOQ
+I024,Mytilus edulis,CD,2017,0.195,Above LOQ
+I024,Mytilus edulis,CD,2018,0.15,Above LOQ
+I024,Mytilus edulis,CD,2019,0.195,Above LOQ
+I024,Mytilus edulis,CD,2020,0.26,Above LOQ
+I024,Mytilus edulis,CD,2021,0.23,Above LOQ
+I024,Mytilus edulis,CD,2022,0.21,Above LOQ
+I131A,Mytilus edulis,CB118,1995,0.17,Above LOQ
+I131A,Mytilus edulis,CB118,1996,0.37,Above LOQ
+I131A,Mytilus edulis,CB118,1997,0.4,Above LOQ
+I131A,Mytilus edulis,CB118,1998,0.74,Above LOQ
+I131A,Mytilus edulis,CB118,1999,0.39,Above LOQ
+I131A,Mytilus edulis,CB118,2000,0.35,Above LOQ
+I131A,Mytilus edulis,CB118,2001,0.4,Above LOQ
+I131A,Mytilus edulis,CB118,2002,1.4,Above LOQ
+I131A,Mytilus edulis,CB118,2003,0.19,Above LOQ
+I131A,Mytilus edulis,CB118,2004,0.15,Above LOQ
+I131A,Mytilus edulis,CB118,2005,0.21,Above LOQ
+I131A,Mytilus edulis,CB118,2006,0.12,Above LOQ
+I131A,Mytilus edulis,CB118,2007,0.11,Above LOQ
+I131A,Mytilus edulis,CB118,2008,0.28,Above LOQ
+I131A,Mytilus edulis,CB118,2009,0.17,Above LOQ
+I131A,Mytilus edulis,CB118,2010,0.1,Above LOQ
+I131A,Mytilus edulis,CB118,2011,0.13,Above LOQ
+I131A,Mytilus edulis,CD,1995,0.196,Above LOQ
+I131A,Mytilus edulis,CD,1996,0.16,Above LOQ
+I131A,Mytilus edulis,CD,1997,0.206,Above LOQ
+I131A,Mytilus edulis,CD,1998,0.201,Above LOQ
+I131A,Mytilus edulis,CD,1999,0.226,Above LOQ
+I131A,Mytilus edulis,CD,2000,0.43,Above LOQ
+I131A,Mytilus edulis,CD,2001,0.379,Above LOQ
+I131A,Mytilus edulis,CD,2002,0.2,Above LOQ
+I131A,Mytilus edulis,CD,2003,0.119,Above LOQ
+I131A,Mytilus edulis,CD,2004,0.186,Above LOQ
+I131A,Mytilus edulis,CD,2005,0.137,Above LOQ
+I131A,Mytilus edulis,CD,2006,0.115,Above LOQ
+I131A,Mytilus edulis,CD,2007,0.111,Above LOQ
+I131A,Mytilus edulis,CD,2008,0.15,Above LOQ
+I131A,Mytilus edulis,CD,2009,0.175,Above LOQ
+I131A,Mytilus edulis,CD,2010,0.143,Above LOQ
+I131A,Mytilus edulis,CD,2011,0.245,Above LOQ
+I131A,Mytilus edulis,CD,2012,0.23,Above LOQ
+I131A,Mytilus edulis,CD,2013,0.15,Above LOQ
+I131A,Mytilus edulis,CD,2014,0.15,Above LOQ
+I131A,Mytilus edulis,CD,2015,0.17,Above LOQ
+I131A,Mytilus edulis,CD,2016,0.18,Above LOQ
+I131A,Mytilus edulis,CD,2017,0.14,Above LOQ
+I131A,Mytilus edulis,CD,2018,0.17,Above LOQ
+I131A,Mytilus edulis,CD,2019,0.15,Above LOQ
+I131A,Mytilus edulis,CD,2020,0.17,Above LOQ
+I131A,Mytilus edulis,CD,2021,0.1,Above LOQ
+I131A,Mytilus edulis,CD,2022,0.19,Above LOQ
+I241,Mytilus edulis,CB118,1995,1.4,Above LOQ
+I241,Mytilus edulis,CB118,1996,2.3,Above LOQ
+I241,Mytilus edulis,CB118,1997,1.05,Above LOQ
+I241,Mytilus edulis,CB118,1998,1.1,Above LOQ
+I241,Mytilus edulis,CB118,1999,2.8,Above LOQ
+I241,Mytilus edulis,CB118,2000,1.7,Above LOQ
+I241,Mytilus edulis,CB118,2001,2.1,Above LOQ
+I241,Mytilus edulis,CB118,2002,3.9,Above LOQ
+I241,Mytilus edulis,CB118,2003,3.8,Above LOQ
+I241,Mytilus edulis,CB118,2004,2.4,Above LOQ
+I241,Mytilus edulis,CB118,2005,1.2,Above LOQ
+I241,Mytilus edulis,CB118,2006,1.3,Above LOQ
+I241,Mytilus edulis,CB118,2007,1.1,Above LOQ
+I241,Mytilus edulis,CB118,2008,1.5,Above LOQ
+I241,Mytilus edulis,CB118,2009,1.5,Above LOQ
+I241,Mytilus edulis,CB118,2010,0.81,Above LOQ
+I241,Mytilus edulis,CB118,2011,7,Above LOQ
+I241,Mytilus edulis,CB118,2013,0.53,Above LOQ
+I241,Mytilus edulis,CB118,2014,0.68,Above LOQ
+I241,Mytilus edulis,CB118,2015,0.7,Above LOQ
+I241,Mytilus edulis,CB118,2016,0.54,Above LOQ
+I241,Mytilus edulis,CB118,2017,0.87,Above LOQ
+I241,Mytilus edulis,CB118,2018,0.546,Above LOQ
+I241,Mytilus edulis,CB118,2019,1.55,Above LOQ
+I241,Mytilus edulis,CB118,2020,0.67,Above LOQ
+I241,Mytilus edulis,CB118,2021,0.659,Above LOQ
+I241,Mytilus edulis,CB118,2022,0.94,Above LOQ
+I241,Mytilus edulis,CD,2009,0.227,Above LOQ
+I241,Mytilus edulis,CD,2010,0.144,Above LOQ
+I241,Mytilus edulis,CD,2011,0.122,Above LOQ
+I241,Mytilus edulis,CD,2013,0.0575,Above LOQ
+I241,Mytilus edulis,CD,2014,0.0835,Above LOQ
+I241,Mytilus edulis,CD,2015,0.073,Above LOQ
+I241,Mytilus edulis,CD,2016,0.1,Above LOQ
+I241,Mytilus edulis,CD,2017,0.14,Above LOQ
+I241,Mytilus edulis,CD,2018,0.12,Above LOQ
+I241,Mytilus edulis,CD,2019,0.099,Above LOQ
+I241,Mytilus edulis,CD,2020,0.13,Above LOQ
+I241,Mytilus edulis,CD,2021,0.13,Above LOQ
+I241,Mytilus edulis,CD,2022,0.096,Above LOQ
+I301,Mytilus edulis,CB118,1992,10.4,Above LOQ
+I301,Mytilus edulis,CB118,1995,4.32,Above LOQ
+I301,Mytilus edulis,CB118,1996,3.88,Above LOQ
+I301,Mytilus edulis,CB118,1997,5.92,Above LOQ
+I301,Mytilus edulis,CB118,1998,2.9,Above LOQ
+I301,Mytilus edulis,CB118,1999,3.5,Above LOQ
+I301,Mytilus edulis,CB118,2000,1.8,Above LOQ
+I301,Mytilus edulis,CB118,2001,1.6,Above LOQ
+I301,Mytilus edulis,CB118,2002,1.8,Above LOQ
+I301,Mytilus edulis,CB118,2003,2.3,Above LOQ
+I301,Mytilus edulis,CB118,2004,1.2,Above LOQ
+I301,Mytilus edulis,CB118,2005,1.8,Above LOQ
+I301,Mytilus edulis,CB118,2006,1.7,Above LOQ
+I301,Mytilus edulis,CB118,2007,1.7,Above LOQ
+I301,Mytilus edulis,CB118,2008,2.7,Above LOQ
+I301,Mytilus edulis,CB118,2009,1.1,Above LOQ
+I301,Mytilus edulis,CB118,2010,0.99,Above LOQ
+I301,Mytilus edulis,CB118,2011,0.98,Above LOQ
+I301,Mytilus edulis,CB118,2012,1.6,Above LOQ
+I301,Mytilus edulis,CB118,2013,1,Above LOQ
+I301,Mytilus edulis,CB118,2014,0.95,Above LOQ
+I301,Mytilus edulis,CB118,2015,1.3,Above LOQ
+I301,Mytilus edulis,CB118,2016,0.8,Above LOQ
+I301,Mytilus edulis,CB118,2017,1.32,Above LOQ
+I301,Mytilus edulis,CB118,2018,0.631,Above LOQ
+I301,Mytilus edulis,CB118,2019,0.657,Above LOQ
+I301,Mytilus edulis,CB118,2020,0.995,Above LOQ
+I301,Mytilus edulis,CB118,2021,1.28,Above LOQ
+I301,Mytilus edulis,CB118,2022,1.01,Above LOQ
+I301,Mytilus edulis,CD,1992,0.27,Above LOQ
+I301,Mytilus edulis,CD,1995,0.148,Above LOQ
+I301,Mytilus edulis,CD,1996,0.14,Above LOQ
+I301,Mytilus edulis,CD,1997,0.152,Above LOQ
+I301,Mytilus edulis,CD,1998,0.168,Above LOQ
+I301,Mytilus edulis,CD,1999,0.207,Above LOQ
+I301,Mytilus edulis,CD,2000,0.141,Above LOQ
+I301,Mytilus edulis,CD,2001,0.12,Above LOQ
+I301,Mytilus edulis,CD,2002,0.142,Above LOQ
+I301,Mytilus edulis,CD,2003,0.182,Above LOQ
+I301,Mytilus edulis,CD,2004,0.159,Above LOQ
+I301,Mytilus edulis,CD,2005,0.149,Above LOQ
+I301,Mytilus edulis,CD,2006,0.217,Above LOQ
+I301,Mytilus edulis,CD,2007,0.201,Above LOQ
+I301,Mytilus edulis,CD,2008,0.225,Above LOQ
+I301,Mytilus edulis,CD,2009,0.18,Above LOQ
+I301,Mytilus edulis,CD,2010,0.212,Above LOQ
+I301,Mytilus edulis,CD,2011,0.18,Above LOQ
+I301,Mytilus edulis,CD,2012,0.19,Above LOQ
+I301,Mytilus edulis,CD,2013,0.18,Above LOQ
+I301,Mytilus edulis,CD,2014,0.14,Above LOQ
+I301,Mytilus edulis,CD,2015,0.21,Above LOQ
+I301,Mytilus edulis,CD,2016,0.19,Above LOQ
+I301,Mytilus edulis,CD,2017,0.19,Above LOQ
+I301,Mytilus edulis,CD,2018,0.29,Above LOQ
+I301,Mytilus edulis,CD,2019,0.17,Above LOQ
+I301,Mytilus edulis,CD,2020,0.27,Above LOQ
+I301,Mytilus edulis,CD,2021,0.16,Above LOQ
+I301,Mytilus edulis,CD,2022,0.19,Above LOQ
+I304,Mytilus edulis,CB118,1995,1.06,Above LOQ
+I304,Mytilus edulis,CB118,1996,0.79,Above LOQ
+I304,Mytilus edulis,CB118,1997,1.3,Above LOQ
+I304,Mytilus edulis,CB118,1998,1.1,Above LOQ
+I304,Mytilus edulis,CB118,2000,0.64,Above LOQ
+I304,Mytilus edulis,CB118,2001,0.46,Above LOQ
+I304,Mytilus edulis,CB118,2002,0.61,Above LOQ
+I304,Mytilus edulis,CB118,2003,0.72,Above LOQ
+I304,Mytilus edulis,CB118,2004,0.71,Above LOQ
+I304,Mytilus edulis,CB118,2005,0.45,Above LOQ
+I304,Mytilus edulis,CB118,2006,0.4,Above LOQ
+I304,Mytilus edulis,CB118,2007,0.73,Above LOQ
+I304,Mytilus edulis,CB118,2008,1.2,Above LOQ
+I304,Mytilus edulis,CB118,2009,0.46,Above LOQ
+I304,Mytilus edulis,CB118,2010,0.32,Above LOQ
+I304,Mytilus edulis,CB118,2011,0.39,Above LOQ
+I304,Mytilus edulis,CB118,2012,0.57,Above LOQ
+I304,Mytilus edulis,CB118,2013,0.33,Above LOQ
+I304,Mytilus edulis,CB118,2014,0.23,Above LOQ
+I304,Mytilus edulis,CB118,2015,0.38,Above LOQ
+I304,Mytilus edulis,CB118,2016,0.26,Above LOQ
+I304,Mytilus edulis,CB118,2017,0.32,Above LOQ
+I304,Mytilus edulis,CB118,2018,0.276,Above LOQ
+I304,Mytilus edulis,CB118,2019,0.26,Above LOQ
+I304,Mytilus edulis,CB118,2020,0.611,Above LOQ
+I304,Mytilus edulis,CB118,2021,0.38,Above LOQ
+I304,Mytilus edulis,CB118,2022,0.246,Above LOQ
+I304,Mytilus edulis,CD,1995,0.198,Above LOQ
+I304,Mytilus edulis,CD,1996,0.128,Above LOQ
+I304,Mytilus edulis,CD,1997,0.114,Above LOQ
+I304,Mytilus edulis,CD,1998,0.155,Above LOQ
+I304,Mytilus edulis,CD,1999,0.178,Above LOQ
+I304,Mytilus edulis,CD,2000,0.151,Above LOQ
+I304,Mytilus edulis,CD,2001,0.153,Above LOQ
+I304,Mytilus edulis,CD,2002,0.169,Above LOQ
+I304,Mytilus edulis,CD,2003,0.224,Above LOQ
+I304,Mytilus edulis,CD,2004,0.14,Above LOQ
+I304,Mytilus edulis,CD,2005,0.153,Above LOQ
+I304,Mytilus edulis,CD,2006,0.176,Above LOQ
+I304,Mytilus edulis,CD,2007,0.16,Above LOQ
+I304,Mytilus edulis,CD,2008,0.177,Above LOQ
+I304,Mytilus edulis,CD,2009,0.162,Above LOQ
+I304,Mytilus edulis,CD,2010,0.179,Above LOQ
+I304,Mytilus edulis,CD,2011,0.192,Above LOQ
+I304,Mytilus edulis,CD,2012,0.2,Above LOQ
+I304,Mytilus edulis,CD,2013,0.22,Above LOQ
+I304,Mytilus edulis,CD,2014,0.24,Above LOQ
+I304,Mytilus edulis,CD,2015,0.2,Above LOQ
+I304,Mytilus edulis,CD,2016,0.21,Above LOQ
+I304,Mytilus edulis,CD,2017,0.23,Above LOQ
+I304,Mytilus edulis,CD,2018,0.26,Above LOQ
+I304,Mytilus edulis,CD,2019,0.18,Above LOQ
+I304,Mytilus edulis,CD,2020,0.26,Above LOQ
+I304,Mytilus edulis,CD,2021,0.19,Above LOQ
+I304,Mytilus edulis,CD,2022,0.16,Above LOQ
+I965,Mytilus edulis,CB118,2018,0.42,Above LOQ
+I965,Mytilus edulis,CB118,2019,0.295,Above LOQ
+I965,Mytilus edulis,CB118,2020,0.475,Above LOQ
+I965,Mytilus edulis,CB118,2022,0.179,Above LOQ
+I965,Mytilus edulis,CD,2001,0.234,Above LOQ
+I965,Mytilus edulis,CD,2002,0.28,Above LOQ
+I965,Mytilus edulis,CD,2003,0.135,Above LOQ
+I965,Mytilus edulis,CD,2004,0.248,Above LOQ
+I965,Mytilus edulis,CD,2005,0.25,Above LOQ
+I965,Mytilus edulis,CD,2006,0.249,Above LOQ
+I965,Mytilus edulis,CD,2007,0.27,Above LOQ
+I965,Mytilus edulis,CD,2008,0.3067,Above LOQ
+I965,Mytilus edulis,CD,2009,0.228,Above LOQ
+I965,Mytilus edulis,CD,2010,0.222,Above LOQ
+I965,Mytilus edulis,CD,2011,0.223,Above LOQ
+I965,Mytilus edulis,CD,2012,0.16,Above LOQ
+I965,Mytilus edulis,CD,2013,0.17,Above LOQ
+I965,Mytilus edulis,CD,2014,0.14,Above LOQ
+I965,Mytilus edulis,CD,2015,0.15,Above LOQ
+I965,Mytilus edulis,CD,2016,0.14,Above LOQ
+I965,Mytilus edulis,CD,2017,0.17,Above LOQ
+I965,Mytilus edulis,CD,2018,0.16,Above LOQ
+I965,Mytilus edulis,CD,2019,0.13,Above LOQ
+I965,Mytilus edulis,CD,2020,0.12,Above LOQ
+I965,Mytilus edulis,CD,2022,0.11,Above LOQ
+I969,Mytilus edulis,CB118,2018,0.141,Above LOQ
+I969,Mytilus edulis,CB118,2019,0.07905,Above LOQ
+I969,Mytilus edulis,CB118,2020,0.134,Above LOQ
+I969,Mytilus edulis,CB118,2022,0.0981,Above LOQ
+I969,Mytilus edulis,CD,1995,0.106,Above LOQ
+I969,Mytilus edulis,CD,1996,0.118,Above LOQ
+I969,Mytilus edulis,CD,1997,0.056,Above LOQ
+I969,Mytilus edulis,CD,1998,0.116,Above LOQ
+I969,Mytilus edulis,CD,1999,0.107,Above LOQ
+I969,Mytilus edulis,CD,2000,0.143,Above LOQ
+I969,Mytilus edulis,CD,2001,0.13,Above LOQ
+I969,Mytilus edulis,CD,2002,0.152,Above LOQ
+I969,Mytilus edulis,CD,2003,0.0875,Above LOQ
+I969,Mytilus edulis,CD,2004,0.108,Above LOQ
+I969,Mytilus edulis,CD,2005,0.19,Above LOQ
+I969,Mytilus edulis,CD,2006,0.082,Above LOQ
+I969,Mytilus edulis,CD,2007,0.087,Above LOQ
+I969,Mytilus edulis,CD,2008,0.104,Above LOQ
+I969,Mytilus edulis,CD,2009,0.0981,Above LOQ
+I969,Mytilus edulis,CD,2010,0.124,Above LOQ
+I969,Mytilus edulis,CD,2011,0.133,Above LOQ
+I969,Mytilus edulis,CD,2012,0.12,Above LOQ
+I969,Mytilus edulis,CD,2013,0.096,Above LOQ
+I969,Mytilus edulis,CD,2014,0.12,Above LOQ
+I969,Mytilus edulis,CD,2015,0.1,Above LOQ
+I969,Mytilus edulis,CD,2016,0.0845,Above LOQ
+I969,Mytilus edulis,CD,2017,0.13,Above LOQ
+I969,Mytilus edulis,CD,2018,0.11,Above LOQ
+I969,Mytilus edulis,CD,2019,0.135,Above LOQ
+I969,Mytilus edulis,CD,2020,0.07,Above LOQ
+I969,Mytilus edulis,CD,2022,0.07,Below LOQ

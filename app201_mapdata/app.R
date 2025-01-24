@@ -10,6 +10,17 @@ stations <- read.csv("../input_data/milkys_example_coord.csv") %>%
   filter(STATION_CODE %in% unique(data_all$STATION_CODE))
 params_all <- unique(data_all$PARAM) %>% sort()
 
+lookup_species <- data.frame(
+  species = c("Cod", "Blue mussel"),
+  LATIN_NAME = c("Gadus morhua", "Mytilus edulis")
+)
+
+stations_for_map <- data_all %>%
+  distinct(STATION_CODE, LATIN_NAME) %>%
+  left_join(stations, by = join_by(STATION_CODE)) %>%
+  left_join(lookup_species, by = join_by(LATIN_NAME))
+
+species_all <- unique(stations_for_map$species)
 
 # from
 # https://www.r-bloggers.com/2017/03/4-tricks-for-working-with-r-leaflet-and-shiny/
@@ -21,6 +32,7 @@ ui <- fluidPage(
   column(4, 
          br(),br(),br(),br(),
          shiny::selectInput("param", "Substance", params_all, "CD"),
+         shiny::selectizeInput("species", "Species", species_all, "Cod", multiple = TRUE),
          plotOutput("plot", height="300px")),
   br()
 )
@@ -35,10 +47,12 @@ server <- function(input, output) {
   
   # Leaflet map with 2 markers
   output$map <- renderLeaflet({
+    stations_selected_species <- stations_for_map %>%
+      filter(species %in% input$species)
     leaflet() %>% 
-      setView(lng=11 , lat =60, zoom=6) %>%
+      setView(lng = 13 , lat = 66, zoom = 4) %>%
       addTiles(options = providerTileOptions(noWrap = TRUE)) %>%
-      addCircleMarkers(data=stations, ~x , ~y, layerId=~STATION_CODE, popup=~STATION_CODE, radius=8 , color="black",  fillColor="red", stroke = TRUE, fillOpacity = 0.8)
+      addCircleMarkers(data=stations_selected_species, ~x , ~y, layerId=~STATION_CODE, popup=~STATION_CODE, radius=8 , color="black",  fillColor="red", stroke = TRUE, fillOpacity = 0.8)
   })
   # store the click
   observeEvent(input$map_marker_click,{
