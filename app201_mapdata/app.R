@@ -68,8 +68,11 @@ server <- function(input, output) {
     leaflet() %>% 
       setView(lng = 13 , lat = 66, zoom = 4) %>%
       addTiles(options = providerTileOptions(noWrap = TRUE)) %>%
-      addCircleMarkers(data=stations_selected_click, ~x , ~y, radius=12 , color="green",  fillColor="green", stroke = TRUE) %>%
-      addCircleMarkers(data=stations_selected_species, ~x , ~y, layerId=~STATION_CODE, popup=~STATION_CODE, radius=8 , color="black",  fillColor=~color, stroke = TRUE, fillOpacity = 0.8)
+      addCircleMarkers(data=stations_selected_click, ~x , ~y, 
+                       radius=10, color="green",  fillColor="green", stroke = TRUE, weight = 1) %>%
+      addCircleMarkers(data=stations_selected_species, ~x , ~y, layerId=~STATION_CODE, popup=~STATION_CODE, 
+                       fillColor=~color, 
+                       radius=6 , color="black", stroke = TRUE, fillOpacity = 0.8, weight = 3)
   })
   # store the click
   observeEvent(input$map_marker_click,{
