@@ -6,6 +6,7 @@
 library(shiny)
 library(ggplot2)
 library(ggrepel)
+source("app_functions.R")
 
 dat <- read.csv("KartOgFigurgrunnlag2021.csv", encoding = "") %>%
   mutate(x = x/1000,
