@@ -65,6 +65,14 @@ server <- function(input, output) {
   # create a reactive value that will store the click position
   data_of_click <- reactiveValues(clickedMarker=NULL)
   
+  selected_station_code <- reactive({
+    # select stations that have been clicked (layer below top layer)
+    result = data_of_click$clickedMarker$id
+    if(is.null(result)){
+      result <- "30B"}
+    result
+  })
+  
   # Leaflet map with 2 markers
   output$map <- renderLeaflet({
     # select stations by selected species (top layer of map)
@@ -75,12 +83,8 @@ server <- function(input, output) {
           species %in% "Cod" ~ "red",
           species %in% "Blue mussel" ~ "blue")
       )
-    # select stations that have been clicked (layer below top layer)
-    selected_station_code = data_of_click$clickedMarker$id
-    if(is.null(selected_station_code)){selected_station_code = "30B"}
-    # print(selected_station_code)
     stations_for_map_selected <- stations_for_map %>%
-      filter(STATION_CODE %in% selected_station_code)
+      filter(STATION_CODE %in% selected_station_code())
     # show map
     leaflet() %>% 
       setView(lng = 13 , lat = 66, zoom = 4) %>%
@@ -98,19 +102,15 @@ server <- function(input, output) {
   
   # Make a barplot or scatterplot depending of the selected point
   output$plot=renderPlot({
-    selected_station_code = data_of_click$clickedMarker$id
-    if(is.null(selected_station_code)){selected_station_code = "30B"}
-    # print(selected_station_code)
-    # print(data_of_click$clickedMarker)
     data_selected <- data_all %>% 
-      filter(STATION_CODE %in% selected_station_code & PARAM %in% input$param)
-    # plot(concentration~MYEAR, data = data_selected, main = paste("Station", selected_station_code))
+      filter(STATION_CODE %in% selected_station_code() & PARAM %in% input$param)
+    # plot(concentration~MYEAR, data = data_selected, main = paste("Station", selected_station_code()))
     ggplot(data_selected, aes(x = MYEAR, y = concentration)) +
       geom_line() +
       geom_point() +
       theme_minimal() +
       labs(
-        title = paste("Measurements for station:", selected_station_code),
+        title = paste("Measurements for station:", selected_station_code()),
         x = "Year",
         y = "Concentration"
       )
