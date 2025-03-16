@@ -3,6 +3,23 @@ library(leaflet)
 library(dplyr)
 library(ggplot2)
 
+# before app starts
+#   data_all <- file 
+#   stations <- file  
+#   lookup_species <- hard-coded
+#   stations_for_map <- data_all + stations + lookup_species   
+#   params_all <- data_all
+#   species_all <- stations_for_map -> 
+#   stations_all <- stations_for_map
+# ui uses 
+#   params_all
+#   species_all
+# server
+#   output$map internals:
+#     stations_selected_species <- stations_for_map (filter: input$species)
+#     selected_station_code (from click)
+#     stations_for_map_selected <- stations_for_map (filter: selected_station)
+
 # Read data
 data_all <- read.csv("../input_data/milkys_example.csv")
 stations <- read.csv("../input_data/milkys_example_coord.csv") %>%
@@ -59,16 +76,16 @@ server <- function(input, output) {
           species %in% "Blue mussel" ~ "blue")
       )
     # select stations that have been clicked (layer below top layer)
-    selected_station = data_of_click$clickedMarker$id
-    if(is.null(selected_station)){selected_station = "30B"}
-    # print(selected_station)
-    stations_selected_click <- stations_for_map %>%
-      filter(STATION_CODE %in% selected_station)
+    selected_station_code = data_of_click$clickedMarker$id
+    if(is.null(selected_station_code)){selected_station_code = "30B"}
+    # print(selected_station_code)
+    stations_for_map_selected <- stations_for_map %>%
+      filter(STATION_CODE %in% selected_station_code)
     # show map
     leaflet() %>% 
       setView(lng = 13 , lat = 66, zoom = 4) %>%
       addTiles(options = providerTileOptions(noWrap = TRUE)) %>%
-      addCircleMarkers(data=stations_selected_click, ~x , ~y, 
+      addCircleMarkers(data=stations_for_map_selected, ~x , ~y, 
                        radius=10, color="green",  fillColor="green", stroke = TRUE, weight = 1) %>%
       addCircleMarkers(data=stations_selected_species, ~x , ~y, layerId=~STATION_CODE, popup=~STATION_CODE, 
                        fillColor=~color, 
@@ -81,19 +98,19 @@ server <- function(input, output) {
   
   # Make a barplot or scatterplot depending of the selected point
   output$plot=renderPlot({
-    selected_station = data_of_click$clickedMarker$id
-    if(is.null(selected_station)){selected_station = "30B"}
-    # print(selected_station)
+    selected_station_code = data_of_click$clickedMarker$id
+    if(is.null(selected_station_code)){selected_station_code = "30B"}
+    # print(selected_station_code)
     # print(data_of_click$clickedMarker)
     data_selected <- data_all %>% 
-      filter(STATION_CODE %in% selected_station & PARAM %in% input$param)
-    # plot(concentration~MYEAR, data = data_selected, main = paste("Station", selected_station))
+      filter(STATION_CODE %in% selected_station_code & PARAM %in% input$param)
+    # plot(concentration~MYEAR, data = data_selected, main = paste("Station", selected_station_code))
     ggplot(data_selected, aes(x = MYEAR, y = concentration)) +
       geom_line() +
       geom_point() +
       theme_minimal() +
       labs(
-        title = paste("Measurements for station:", selected_station),
+        title = paste("Measurements for station:", selected_station_code),
         x = "Year",
         y = "Concentration"
       )
