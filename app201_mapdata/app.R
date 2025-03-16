@@ -50,7 +50,8 @@ ui <- fluidPage(
   column(4, 
          br(),br(),br(),br(),
          shiny::selectInput("param", "Substance", params_all, "CD"),
-         shiny::selectizeInput("species", "Species", species_all, "Cod", multiple = TRUE),
+         shiny::checkboxGroupInput(inputId = "species", "Species", species_all, "Cod / torsk"),
+         # shiny::selectizeInput(),
          # should add interactive stations selector, which is updated when the map is clicked
          # shiny::selectizeInput("station", "Station", stations_all, "30B", multiple = FALSE),
          plotOutput("plot", height="300px")),
@@ -64,6 +65,11 @@ server <- function(input, output) {
   
   # create a reactive value that will store the click position
   data_of_click <- reactiveValues(clickedMarker=NULL)
+  
+  # store the click
+  observeEvent(input$map_marker_click,{
+    data_of_click$clickedMarker <- input$map_marker_click
+  })
   
   selected_station_code <- reactive({
     # select stations that have been clicked (layer below top layer)
@@ -95,10 +101,8 @@ server <- function(input, output) {
                        fillColor=~color, 
                        radius=6 , color="black", stroke = TRUE, fillOpacity = 0.8, weight = 3)
   })
-  # store the click
-  observeEvent(input$map_marker_click,{
-    data_of_click$clickedMarker <- input$map_marker_click
-  })
+  
+
   
   # Make a barplot or scatterplot depending of the selected point
   output$plot=renderPlot({
