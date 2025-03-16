@@ -15,10 +15,10 @@ library(ggplot2)
 #   params_all
 #   species_all
 # server
+#   selected_station_code (reactive values from click)
 #   output$map internals:
 #     stations_selected_species <- stations_for_map (filter: input$species)
-#     selected_station_code (from click)
-#     stations_for_map_selected <- stations_for_map (filter: selected_station)
+#     stations_for_map_selected <- stations_for_map (filter: selected_station_code)
 
 # Read data
 data_all <- read.csv("../input_data/milkys_example.csv")
@@ -28,8 +28,8 @@ stations <- read.csv("../input_data/milkys_example_coord.csv") %>%
 params_all <- unique(data_all$PARAM) %>% sort()
 
 lookup_species <- data.frame(
-  species = c("Cod", "Blue mussel"),
-  LATIN_NAME = c("Gadus morhua", "Mytilus edulis")
+  species = c("Cod / torsk", "Blue mussel / blåskjell", "Dog whelk / purpursnegl", "Eider duck / ærfugl"),
+  LATIN_NAME = c("Gadus morhua", "Mytilus edulis", "Nucella lapillus", "Somateria mollissima")
 )
 
 stations_for_map <- data_all %>%
