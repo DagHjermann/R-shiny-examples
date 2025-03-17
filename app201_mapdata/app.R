@@ -51,6 +51,8 @@ ui <- fluidPage(
          br(),br(),br(),br(),
          shiny::selectInput("param", "Substance", params_all, "CD"),
          shiny::checkboxGroupInput(inputId = "species", "Species", species_all, "Cod / torsk"),
+         shiny::checkboxInput(inputId = "choose_from_map", "Choose station from map", value = FALSE),
+         shiny::uiOutput("station"),
          # shiny::selectizeInput(),
          # should add interactive stations selector, which is updated when the map is clicked
          # shiny::selectizeInput("station", "Station", stations_all, "30B", multiple = FALSE),
@@ -63,6 +65,11 @@ server <- function(input, output) {
   # build data with 2 places
   # stations = data.frame(x=c(130, 128), y=c(-22,-26), id=c("place1", "place2"))
   
+  # Make station menu
+  output$station <- renderUI({
+    shiny::selectInput("station", "Station", stations_all, selected_station_code())
+  })
+  
   # create a reactive value that will store the click position
   data_of_click <- reactiveValues(clickedMarker=NULL)
   
@@ -71,11 +78,17 @@ server <- function(input, output) {
     data_of_click$clickedMarker <- input$map_marker_click
   })
   
+  # selected station code is either chosen by clicking on the map
+  # - in which case station menu is governed by clicked station
+  # or from the menu
   selected_station_code <- reactive({
-    # select stations that have been clicked (layer below top layer)
-    result = data_of_click$clickedMarker$id
-    if(is.null(result)){
-      result <- "30B"}
+    if (input$choose_from_map){
+      # select stations that have been clicked (layer below top layer)
+      result = data_of_click$clickedMarker$id
+      if (is.null(result)){ result <- "30B" }
+    } else {
+      result = input$station
+    }
     result
   })
   
