@@ -17,25 +17,34 @@ library(ggplot2)
 # server
 #   selected_station_code (reactive values from click)
 #   output$map internals:
-#     stations_selected_species <- stations_for_map (filter: input$species)
+#     stations_preselected <- stations_for_map (filter: input$param and input$species)
 #     stations_for_map_selected <- stations_for_map (filter: selected_station_code)
 
-# Read data
-data_all <- read.csv("../input_data/milkys_example.csv")
-stations <- read.csv("../input_data/milkys_example_coord.csv") %>%
-  rename(x = Long, y = Lat)  %>%
-  filter(STATION_CODE %in% unique(data_all$STATION_CODE))
-params_all <- unique(data_all$PARAM) %>% sort()
-
+# Lookup data for species
 lookup_species <- data.frame(
   species = c("Cod / torsk", "Blue mussel / blåskjell", "Dog whelk / purpursnegl", "Eider duck / ærfugl"),
   LATIN_NAME = c("Gadus morhua", "Mytilus edulis", "Nucella lapillus", "Somateria mollissima")
 )
+# Read data
+data_all <- read.csv("../input_data/milkys_example.csv") %>% 
+  left_join(lookup_species, by = join_by(LATIN_NAME))
+params_all <- unique(data_all$PARAM) %>% sort()
+
+# Lookup data for stations
+stations <- read.csv("../input_data/milkys_example_coord.csv") %>%
+  rename(x = Long, y = Lat)  %>%
+  filter(STATION_CODE %in% unique(data_all$STATION_CODE))
 
 stations_for_map <- data_all %>%
-  distinct(STATION_CODE, LATIN_NAME) %>%
+  distinct(STATION_CODE, LATIN_NAME, species) %>%
   left_join(stations, by = join_by(STATION_CODE)) %>%
-  left_join(lookup_species, by = join_by(LATIN_NAME))
+  mutate(
+    color = case_when(
+      LATIN_NAME %in% "Gadus morhua" ~ "red",
+      LATIN_NAME %in% "Mytilus edulis" ~ "blue",
+      LATIN_NAME %in% "Nucella lapillus" ~ "yellow",
+      LATIN_NAME %in% "Somateria mollissima" ~ "purple")
+  )
 
 species_all <- unique(stations_for_map$species)
 stations_all <- unique(stations_for_map$STATION_CODE)
@@ -65,9 +74,18 @@ server <- function(input, output) {
   # build data with 2 places
   # stations = data.frame(x=c(130, 128), y=c(-22,-26), id=c("place1", "place2"))
   
+  stations_preselected <- reactive({
+    data_all %>%
+      filter(
+        PARAM %in% input$param,
+        species %in% input$species) %>% 
+      distinct(STATION_CODE) %>% 
+      pull(STATION_CODE)
+  })
+  
   # Make station menu
   output$station <- renderUI({
-    shiny::selectInput("station", "Station", stations_all, selected_station_code())
+    shiny::selectInput("station", "Station", stations_preselected(), selected_station_code())
   })
   
   # create a reactive value that will store the click position
@@ -94,14 +112,10 @@ server <- function(input, output) {
   
   # Leaflet map with 2 markers
   output$map <- renderLeaflet({
+    # browser()
     # select stations by selected species (top layer of map)
-    stations_selected_species <- stations_for_map %>%
-      filter(species %in% input$species)%>%
-      mutate(
-        color = case_when(
-          species %in% "Cod" ~ "red",
-          species %in% "Blue mussel" ~ "blue")
-      )
+    stations_for_map_show <- stations_for_map %>% 
+      filter(STATION_CODE %in% stations_preselected())
     stations_for_map_selected <- stations_for_map %>%
       filter(STATION_CODE %in% selected_station_code())
     # show map
@@ -109,8 +123,8 @@ server <- function(input, output) {
       setView(lng = 13 , lat = 66, zoom = 4) %>%
       addTiles(options = providerTileOptions(noWrap = TRUE)) %>%
       addCircleMarkers(data=stations_for_map_selected, ~x , ~y, 
-                       radius=10, color="green",  fillColor="green", stroke = TRUE, weight = 1) %>%
-      addCircleMarkers(data=stations_selected_species, ~x , ~y, layerId=~STATION_CODE, popup=~STATION_CODE, 
+                       radius=12, color="green",  fillColor="green", stroke = TRUE, weight = 1) %>%
+      addCircleMarkers(data = stations_for_map_show, ~x , ~y, layerId=~STATION_CODE, popup=~STATION_CODE, 
                        fillColor=~color, 
                        radius=6 , color="black", stroke = TRUE, fillOpacity = 0.8, weight = 3)
   })
